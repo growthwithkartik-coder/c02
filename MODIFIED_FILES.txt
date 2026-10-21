@@ -1,0 +1,53 @@
+CO2 — files changed in the 18 Oct 2026 "prices on request" update
+(compared with co2-cosmetics-site-update-2026-10-16b.zip)
+
+ADDED
+  + components/commerce/PriceOnRequest.tsx   (label, Request price + WhatsApp buttons, panel)
+
+MODIFIED
+  ~ lib/utils.ts                               (PRICES_ON_REQUEST switch, priceText, labels)
+  ~ components/ui/primitives.tsx, components/product-card/ProductCard.tsx
+  ~ components/product-details/ProductPurchase.tsx, Compare.tsx
+  ~ app/product/[slug]/page.tsx, lib/product-content.ts
+  ~ components/commerce/AddButtons.tsx, BuildCombo.tsx, SampleStudio.tsx
+  ~ components/customization/CustomizationInquiry.tsx   (prefill from ?item=, "Price for a CO2 product")
+  ~ components/miy/Builder.tsx, components/miy/Results.tsx
+  ~ components/consultation/ConsultationResults.tsx
+  ~ components/home/HomeHero.tsx, HeroAddButton.tsx, HomeEditorial.tsx
+  ~ components/face-hero/CampaignHero.tsx, FaceHero.tsx, components/sections/MuseInteraction.tsx
+  ~ components/tryon/TryOnModal.tsx, LipShadeStudio.tsx
+  ~ components/search/SearchOverlay.tsx, components/shop/CategoryExtras.tsx
+  ~ components/filters/ShopExplorer.tsx, DepartmentExplorer.tsx, CatalogExplorer.tsx
+  ~ app/combos/page.tsx, app/combos/[slug]/page.tsx, app/collections/[slug]/page.tsx
+  ~ app/customization/page.tsx, app/sampling/page.tsx, app/make-it-yours/page.tsx, app/guides/[slug]/page.tsx
+  ~ lib/consultation/questions.ts, lib/consultation/engine.ts, lib/customize/flows.ts
+  ~ lib/catalog.ts, lib/ai/catalog-context.ts
+  ~ data/faq.ts, data/site.ts
+  ~ CHANGES.md, MODIFIED_FILES.txt
+
+REMOVED
+  (nothing)
+
+--- 18 Oct 2026 (second batch): Services + WhatsApp price requests ---
+ADDED
+  + data/services.ts
+  + components/sections/ServicesSection.tsx
+  + app/services/page.tsx
+MODIFIED
+  ~ components/commerce/PriceOnRequest.tsx (priceWhatsAppHref, WhatsAppPriceButton)
+  ~ app/page.tsx, data/site.ts (nav + footer), components/navbar/MobileMenu.tsx, app/sitemap.ts
+  ~ every file with a Request price button (now WhatsApp links): AddButtons, BuildCombo, SampleStudio,
+    miy/Results, ConsultationResults, TryOnModal, MuseInteraction, CampaignHero, FaceHero,
+    app/collections/[slug]/page.tsx
+
+--- 18 Oct 2026 (third batch): logo check + proofread ---
+MODIFIED (images)
+  ~ public/products/{renew-firming-cream-1,renew-firming-cream-2,multani-mitti-face-mask-1,shikakai-shampoo-1,mint-cool-herbal-bar-1,mint-cool-herbal-bar-2,papaya-soap-1,turmeric-soap-1}-{640,1200}.webp
+  ~ public/campaign/renew-firming-cream.webp, public/video/* (film re-rendered)
+  ~ assets-source/product-photos-2026-10-16/masters/{multani-mitti-face-mask-1,shikakai-shampoo-1,papaya-soap-1,turmeric-soap-1}.jpg
+MODIFIED (copy)
+  ~ data/products.ts, data/sampling.ts, data/services.ts, lib/product-content.ts (unchanged API)
+  ~ app/product/[slug]/page.tsx, app/about/page.tsx, app/terms/page.tsx, app/shop/page.tsx, app/combos/page.tsx,
+    app/make-it-yours/page.tsx, app/make-it-yours/build/page.tsx, app/api/consultation/photo/route.ts
+  ~ components/home/HomeEditorial.tsx, components/shop/CategoryExtras.tsx, components/commerce/BuildCombo.tsx,
+    components/commerce/PriceOnRequest.tsx, components/consultation/{ConsultationFlow,ConsultationResults,PhotoSuggest}.tsx

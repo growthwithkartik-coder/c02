@@ -1,0 +1,4 @@
+{
+  "_readme": "Written by scripts/generate-campaign.mjs. The site only shows entries with status \"approved\". Approve after a human has checked the product, packaging, label and skin look real and correct: node scripts/generate-campaign.mjs --approve <id>",
+  "images": {}
+}

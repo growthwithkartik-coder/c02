@@ -1,0 +1,110 @@
+{
+ "24k-gold-face-elixir": [
+  4003.7383622828784,
+  "/home/claude/src/co2/public/products/24k-gold-face-elixir-1-1200.webp",
+  0.9750000000000001,
+  [
+   442.8571428571429,
+   125.71428571428572
+  ]
+ ],
+ "aloe-nourish-shampoo": [
+  3078.899263776307,
+  "/home/claude/src/co2/public/products/aloe-nourish-shampoo-1-1200.webp",
+  1.0,
+  [
+   0.0,
+   114.28571428571429
+  ]
+ ],
+ "coco-glow-body-lotion": [
+  5208.724774685776,
+  "/home/claude/src/co2/public/products/coco-glow-body-lotion-1-1200.webp",
+  1.0,
+  [
+   28.571428571428573,
+   111.42857142857143
+  ]
+ ],
+ "gloss-berry-rubin": [
+  1592.144676691297,
+  "/home/claude/src/co2/public/products/gloss-berry-rubin-1-1200.webp",
+  1.0,
+  [
+   234.2857142857143,
+   200.0
+  ]
+ ],
+ "gloss-burgundy-spirit": [
+  1790.426018502557,
+  "/home/claude/src/co2/public/products/gloss-burgundy-spirit-1-1200.webp",
+  1.0,
+  [
+   234.2857142857143,
+   200.0
+  ]
+ ],
+ "gloss-chocolate-dream": [
+  1745.2008262565985,
+  "/home/claude/src/co2/public/products/gloss-chocolate-dream-1-1200.webp",
+  1.0,
+  [
+   234.2857142857143,
+   200.0
+  ]
+ ],
+ "goat-milk-herbal-bar": [
+  994.4992540623361,
+  "/home/claude/src/co2/public/products/goat-milk-herbal-bar-2-1200.webp",
+  1.0,
+  [
+   177.14285714285717,
+   117.14285714285715
+  ]
+ ],
+ "groom-beard-oil": [
+  4838.867156229317,
+  "/home/claude/src/co2/public/products/groom-beard-oil-1-1200.webp",
+  1.0,
+  [
+   180.0,
+   114.28571428571429
+  ]
+ ],
+ "noir-charcoal-mask": [
+  2659.2891624817753,
+  "/home/claude/src/co2/public/products/noir-charcoal-mask-1-1200.webp",
+  1.0,
+  [
+   180.0,
+   114.28571428571429
+  ]
+ ],
+ "renew-firming-cream": [
+  3988.30538714967,
+  "/home/claude/src/co2/public/products/renew-firming-cream-1-1200.webp",
+  1.0,
+  [
+   0.0,
+   114.28571428571429
+  ]
+ ],
+ "sandal-glow-herbal-bar": [
+  1572.6873175247454,
+  "/home/claude/src/co2/public/products/sandal-glow-herbal-bar-2-1200.webp",
+  1.0,
+  [
+   62.85714285714286,
+   117.14285714285715
+  ]
+ ],
+ "scalp-clear-hair-oil": [
+  4759.366512999028,
+  "/home/claude/src/co2/public/products/scalp-clear-hair-oil-1-1200.webp",
+  1.0,
+  [
+   180.0,
+   114.28571428571429
+  ]
+ ]
+}
