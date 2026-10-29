@@ -6,8 +6,8 @@ export const faqs: { group: string; items: { q: string; a: string }[] }[] = [
   {
     group: "Prices",
     items: [
-      { q: "Why don't you show prices?", a: "Every CO2 product can be customized — size, formula, packaging and quantity — so prices are on request and as per your customization. Tell us what you'd like and we'll send you a quote." },
-      { q: "How do I get a price?", a: `Tap “Request price” on any product, set or routine, use the request form on the Customization page, or message us on WhatsApp (${site.contact.phone}) or email ${site.contact.email}. We reply with the price and timeline — nothing is charged until you agree.` },
+      { q: "Where can I see prices?", a: "Every ready-made product shows its full-size price and net weight on its card and product page. Where a travel size exists, its net weight and price are shown beside the full size." },
+      { q: "What about customized products?", a: `Made-to-order formulas, custom packaging and bulk orders are priced on request, as per your customization. Use the request form on the Customization page, message us on WhatsApp (${site.contact.phone}) or email ${site.contact.email} — nothing is charged until you agree.` },
     ],
   },
   {
@@ -39,8 +39,8 @@ export const faqs: { group: string; items: { q: string; a: string }[] }[] = [
   {
     group: "Sampling & combos",
     items: [
-      { q: "Are samples free?", a: "No. Travel-size and sample-set prices are on request, as per the samples and quantities you choose." },
-      { q: "Do combos include a discount?", a: "Combo prices are on request, as per your customization. If a combo offer runs, it will be stated with its terms." },
+      { q: "Are samples free?", a: "No. Each travel size has its own listed price, and a sample set costs the sum of the travel sizes inside it." },
+      { q: "Do combos include a discount?", a: "No — a combo costs the sum of its products' listed prices. If a combo offer runs, it will be stated with its terms." },
     ],
   },
   {

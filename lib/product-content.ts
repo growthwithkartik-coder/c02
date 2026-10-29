@@ -3,7 +3,7 @@ import { combos } from "@/data/combos";
 import { productFormat } from "@/data/taxonomy";
 import { customizationFor, sampleFor } from "@/lib/commerce";
 import { concernsOf, getConcern, formatLabel } from "@/lib/taxonomy";
-import { money, PRICES_ON_REQUEST } from "@/lib/utils";
+import { isPricePending, money, PRICES_ON_REQUEST } from "@/lib/utils";
 import type { Product } from "@/types";
 
 /* ------------------------------------------------------------------
@@ -76,7 +76,7 @@ export function productFaqs(p: Product) {
   const faqs: { q: string; a: string }[] = [
     { q: `How do I use ${p.name}?`, a: `${p.howToUse.join(" ")}${place.order ? ` Where it fits: ${place.order}` : ""}` },
     { q: "What are the key ingredients?", a: p.custom ? "Your formula is built from the options you choose; the final ingredient list is declared on your formula card." : `${p.ingredients.map((i) => `${i.name} (${i.note.charAt(0).toLowerCase() + i.note.slice(1)})`).join("; ")}. These are the key ingredients printed on the pack — see the pack for the full ingredient list.` },
-    { q: "How much does it cost?", a: PRICES_ON_REQUEST ? `The price is on request and as per your customization — it depends on the size, formula, packaging and quantity you choose. Tap “Request price” or message us on WhatsApp and we'll send you a quote.` : `${money(p.price)} for ${p.size}.` },
+    { q: "How much does it cost?", a: isPricePending(p) ? `The price is on request and as per your customization — it depends on the size, formula, packaging and quantity you choose. Tap “Request price” or message us on WhatsApp and we'll send you a quote.` : `${money(p.price)} for ${p.size}.` },
     { q: "What size is it?", a: `${p.size}.${s ? ` A travel size (${s.size}) is also available${PRICES_ON_REQUEST ? " — price on request" : ` for ${money(s.price)}`}.` : ""}` },
     ...(when ? [{ q: "When should I use it?", a: `${when}, according to the directions on the pack.` }] : []),
     {
@@ -87,7 +87,7 @@ export function productFaqs(p: Product) {
           : `You can send a request for a ${cz.label.toLowerCase()} based on your preferences. We reply with what's possible and a price before anything is made.`
         : "This product isn't customizable at the moment. The consultations in Make It Yours can still suggest where it fits in your routine.",
     },
-    { q: "Is there a sample?", a: s ? `Yes — ${s.size}${PRICES_ON_REQUEST ? " (price on request)" : ` for ${money(s.price)}`}. Choose “Travel size” above or visit the Sampling Studio.` : "There's no travel size for this product at the moment." },
+    ...(s ? [{ q: "Is there a travel size?", a: `Yes — ${s.size}${PRICES_ON_REQUEST ? " (price on request)" : ` for ${money(s.price)}`}. Choose “Travel size” above or visit the Sampling Studio.` }] : []),
     { q: "How long does shipping take?", a: `Orders are dispatched in ${c.dispatchDays} and delivered in ${c.deliveryDays}. Shipping is free over ${money(c.freeShippingThreshold)}; otherwise ${money(c.shippingFee)}.${p.custom ? " Made-to-order formulas are prepared first — see the preparation time above." : ""}` },
     { q: "Can I return it?", a: p.custom ? "Made-to-order formulas are prepared for you and can't be returned unless they arrive damaged or incorrect." : `Unopened products can be returned within ${c.returnWindowDays} days of delivery. See the returns policy for details.` },
   ];

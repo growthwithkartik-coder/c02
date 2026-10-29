@@ -606,7 +606,7 @@ export function buildPlan(a: Answers, now = new Date()): Plan {
     const sh = shampoo.top ?? best("hair-wash").top;
     if (sh) {
       const s = scoreProduct(sh.p, { ...ctx, face: false });
-      if (scalpy) s.reasons.unshift(`Part of CO2's Scalp Clear system — “${sh.p.benefits[0]?.title}. ${sh.p.benefits[0]?.text}”`);
+      if (scalpy) s.reasons.unshift(`Part of CO2's anti-dandruff range — “${sh.p.benefits[0]?.title}. ${sh.p.benefits[0]?.text}”`);
       hair.push({ slug: take("hair-wash", s, shampoo.list), step: roleLabels["hair-wash"], note: how(sh.p) });
     }
     if (needs.includes("dryLengths") || needs.length === 0) {

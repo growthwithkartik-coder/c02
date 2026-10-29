@@ -12,7 +12,7 @@ import { combos, comboGroups, getCombo } from "@/data/combos";
 import { getProduct } from "@/lib/catalog";
 import { sampleFor } from "@/lib/commerce";
 import { cardTypeLabel } from "@/lib/taxonomy";
-import { money, productImage, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
+import { isPricePending, listedPrice, money, productImage, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
 
 export const dynamicParams = false;
 
@@ -31,7 +31,8 @@ export default async function ComboPage({ params }: { params: Promise<{ slug: st
   const c = getCombo(slug);
   if (!c) notFound();
   const items = c.items.map((i) => ({ ...i, p: getProduct(i.slug)! })).filter((i) => i.p);
-  const total = items.reduce((t, i) => t + i.p.price, 0);
+  const unpriced = items.filter((i) => isPricePending(i.p));
+  const total = items.reduce((t, i) => t + (listedPrice(i.p) ?? 0), 0);
   const group = comboGroups.find((g) => g.id === c.group);
   const others = combos.filter((x) => x.group === c.group && x.slug !== c.slug).slice(0, 2);
   return (
@@ -53,7 +54,7 @@ export default async function ComboPage({ params }: { params: Promise<{ slug: st
                 <div className="bg-bone-2 p-4"><dt className="label">Set price</dt><dd className="mt-1 font-display text-2xl tabular-nums">{priceText(total)}</dd></div>
                 <div className="bg-bone-2 p-4"><dt className="label">Customizable</dt><dd className="mt-1 font-display text-2xl">{c.customizable?.length ? "Partly" : "No"}</dd></div>
               </dl>
-              <p className="mt-3 text-xs text-taupe">{PRICES_ON_REQUEST ? "Price on request · as per customization — we quote the set once you tell us the sizes, formulas and packaging you want." : "Set price is the sum of the individual prices below — no bundle discount applies."}</p>
+              <p className="mt-3 text-xs text-taupe">{PRICES_ON_REQUEST ? "Price on request · as per customization — we quote the set once you tell us the sizes, formulas and packaging you want." : "Set price is the sum of the individual prices below — no bundle discount applies."}{!PRICES_ON_REQUEST && unpriced.length ? ` ${unpriced.map((i) => i.p.name).join(", ")} ${unpriced.length > 1 ? "are" : "is"} price on request and not included.` : ""}</p>
               <div className="mt-8"><AddComboButton name={c.name} slugs={c.items.map((i) => i.slug)} className="btn-lg w-full sm:w-auto" /></div>
             </div>
           </div>
@@ -78,7 +79,7 @@ export default async function ComboPage({ params }: { params: Promise<{ slug: st
                   <p className="mt-2 text-xs text-taupe">Key ingredients: {i.p.ingredients.map((x) => x.name).join(" · ")}</p>
                 </div>
                 <div className="flex flex-col gap-2 md:col-span-4 md:items-end">
-                  <p className={PRICES_ON_REQUEST ? "text-sm text-taupe" : "font-display text-2xl tabular-nums"}>{priceText(i.p.price)}</p>
+                  <p className={isPricePending(i.p) ? "text-sm text-taupe" : "font-display text-2xl tabular-nums"}>{priceText(listedPrice(i.p))}</p>
                   {s && <AddSampleButton slug={i.slug} compact />}
                   {cz && <Link href={buildHref(cz.customSlug, { from: i.p.custom ? undefined : i.slug })} className="inline-flex items-center gap-1.5 text-xs text-gold-deep underline underline-offset-4"><Sparkles className="h-3.5 w-3.5" /> {cz.note}</Link>}
                 </div>

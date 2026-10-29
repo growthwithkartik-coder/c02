@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useStore } from "@/components/providers/StoreProvider";
 import { getProduct } from "@/lib/catalog";
 import { sampleFor, setPrice } from "@/lib/commerce";
-import { cn, money, PRICES_ON_REQUEST } from "@/lib/utils";
+import { cn, isPricePending, money, PRICES_ON_REQUEST } from "@/lib/utils";
 import { priceWhatsAppHref } from "@/components/commerce/PriceOnRequest";
 
 function useFlash() {
@@ -19,7 +19,7 @@ function useFlash() {
 export function AddComboButton({ name, slugs, className, dark, label }: { name: string; slugs: string[]; className?: string; dark?: boolean; label?: string }) {
   const { addMany } = useStore();
   const [done, flash] = useFlash();
-  const ready = slugs.filter((s) => !getProduct(s)?.custom);
+  const ready = slugs.filter((s) => !getProduct(s)?.custom && (PRICES_ON_REQUEST || !isPricePending(getProduct(s))));
   const custom = slugs.filter((s) => getProduct(s)?.custom);
   if (!ready.length && custom.length) {
     return (
@@ -28,7 +28,7 @@ export function AddComboButton({ name, slugs, className, dark, label }: { name: 
       </Link>
     );
   }
-  if (PRICES_ON_REQUEST) {
+  if (PRICES_ON_REQUEST || !ready.length) {
     return (
       <a target="_blank" rel="noopener noreferrer" data-whatsapp-price href={priceWhatsAppHref(`${name} (${slugs.map((s) => getProduct(s)?.name).filter(Boolean).join(", ")})`)} className={cn("btn", dark ? "btn-gold" : "btn-primary", className)} data-request-price>
         Request set price

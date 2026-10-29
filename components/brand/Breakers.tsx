@@ -62,7 +62,7 @@ export function Breaker({ id, className }: { id: BreakerId; className?: string }
         </section>
       );
     case "samples": {
-      const items = ["24k-gold-face-elixir", "renew-firming-cream", "coco-glow-body-lotion", "aloe-nourish-shampoo", "noir-charcoal-mask"];
+      const items = ["sandal-glow-herbal-bar", "goat-milk-herbal-bar", "coco-glow-body-lotion", "scalp-clear-hair-oil", "noir-charcoal-mask"];
       return (
         <section className={cn("relative overflow-hidden bg-stone py-section", className)} aria-label="Small sizes, big discoveries">
           <div className="container-site grid gap-12 lg:grid-cols-12 lg:items-center">

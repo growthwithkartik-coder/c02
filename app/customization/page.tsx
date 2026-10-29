@@ -8,7 +8,7 @@ import { buildProducts, capFinishes, containers, packColours, type BuildCategory
 import { sampling } from "@/data/sampling";
 import { getCustomFormulas, getProduct } from "@/lib/catalog";
 import { buildHref } from "@/components/miy/links";
-import { money, priceText } from "@/lib/utils";
+import { listedPrice, money, priceText } from "@/lib/utils";
 
 /* ------------------------------------------------------------------
    CUSTOMIZE YOUR PRODUCT
@@ -145,7 +145,7 @@ export default function CustomizationPage() {
                       <span>
                         <span className="block font-display text-2xl leading-tight group-hover:text-gold-deep">{p.name}</span>
                         <span className="text-xs text-taupe">
-                          Size {p.size} · {priceText(p.price)}
+                          Size {p.size} · {priceText(listedPrice(p))}
                           {b ? ` · ${b.containers.map((c) => containers[c].label).join(" / ")}` : ""}
                         </span>
                       </span>

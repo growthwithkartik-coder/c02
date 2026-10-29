@@ -51,3 +51,22 @@ MODIFIED (copy)
     app/make-it-yours/page.tsx, app/make-it-yours/build/page.tsx, app/api/consultation/photo/route.ts
   ~ components/home/HomeEditorial.tsx, components/shop/CategoryExtras.tsx, components/commerce/BuildCombo.tsx,
     components/commerce/PriceOnRequest.tsx, components/consultation/{ConsultationFlow,ConsultationResults,PhotoSuggest}.tsx
+
+--- 26 Oct 2026: price sheet (names, prices, net weights, travel sizes) ---
+ADDED
+  + components/ui/SizePrice.tsx
+  + docs/PRICE-SHEET-UPDATE-2026-10-26.md
+MODIFIED (data)
+  ~ data/products.ts (names, size, price, availability), data/sampling.ts (travel sizes + sets)
+  ~ data/combos.ts, data/campaign.ts, data/faq.ts, data/site.ts (copy)
+MODIFIED (pricing logic / UI)
+  ~ lib/utils.ts (PRICES_ON_REQUEST=false, CUSTOM_PRICES_ON_REQUEST, listedPrice), lib/product-content.ts,
+    lib/ai/catalog-context.ts, lib/customize/flows.ts, lib/consultation/engine.ts
+  ~ components/product-card/ProductCard.tsx, product-details/{ProductPurchase,QuickView,Compare}.tsx,
+    ui/primitives.tsx, commerce/{AddButtons,BuildCombo}.tsx, miy/{Builder,Results}.tsx,
+    consultation/ConsultationResults.tsx, home/{HomeHero,HomeEditorial,HeroAddButton}.tsx,
+    face-hero/{CampaignHero,FaceHero}.tsx, sections/{MuseInteraction,Philosophy}.tsx,
+    shop/CategoryExtras.tsx, brand/Breakers.tsx
+  ~ app/product/[slug]/page.tsx, app/combos/page.tsx, app/combos/[slug]/page.tsx, app/sampling/page.tsx,
+    app/about/page.tsx, app/terms/page.tsx, app/customization/page.tsx, app/make-it-yours/page.tsx,
+    app/guides/[slug]/page.tsx, app/layout.tsx

@@ -89,7 +89,7 @@ export const nav: NavItem[] = [
  *  added here when they are real (the shipping threshold and code below are). */
 export const announcements = [
   "Beauty, made personal",
-  "Prices on request · as per customization",
+  "Full sizes and travel sizes, clearly priced",
   "Discover a routine made around you",
   `Free shipping across India over ₹999`,
   "Your skin is unique — your skincare should be too",

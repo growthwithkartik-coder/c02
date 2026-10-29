@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: site.url,
     title: `CO2 — ${site.tagline}`,
     description: site.description,
-    images: [{ url: "/products/24k-gold-face-elixir-1-1200.webp", width: 1200, height: 1200, alt: "CO2 24K Gold Face Elixir" }],
+    images: [{ url: "/products/24k-gold-face-elixir-1-1200.webp", width: 1200, height: 1200, alt: "CO2 24K Gold Serum" }],
   },
   twitter: { card: "summary_large_image", title: `CO2 — ${site.tagline}`, description: site.description, images: ["/products/24k-gold-face-elixir-1-1200.webp"] },
   icons: { icon: [{ url: "/brand/favicon-64.png", sizes: "64x64" }], apple: "/brand/favicon-180.png" },

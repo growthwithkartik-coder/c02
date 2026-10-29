@@ -2,7 +2,7 @@ import { products } from "@/data/products";
 import { customFormulas } from "@/data/custom-formulas";
 import { productFormat } from "@/data/taxonomy";
 import { buildProducts, containers } from "@/data/customize";
-import { money, PRICES_ON_REQUEST } from "@/lib/utils";
+import { CUSTOM_PRICES_ON_REQUEST, money, PRICES_ON_REQUEST } from "@/lib/utils";
 
 /* ------------------------------------------------------------------
    Make It Yours — category consultations (configuration)
@@ -332,7 +332,7 @@ export const flows: Flow[] = [
         type: "single",
         options: [
           { id: "gloss", label: "Lip gloss", hint: PRICES_ON_REQUEST ? "Five ready shades · price on request" : `Five ready shades · ${money(customPrice("gloss-berry-rubin"))}` },
-          { id: "lip-colour", label: "Lip colour, made to order", hint: PRICES_ON_REQUEST ? "Your colour family and finish · price on request" : `Your colour family and finish · ${money(customPrice("custom-lip"))}` },
+          { id: "lip-colour", label: "Lip colour, made to order", hint: PRICES_ON_REQUEST || CUSTOM_PRICES_ON_REQUEST ? "Your colour family and finish · price on request" : `Your colour family and finish · ${money(customPrice("custom-lip"))}` },
           { id: "balm", label: "Lip balm, on request", hint: "Clear or sheer tint · priced after review" },
         ],
       },

@@ -11,7 +11,7 @@ import { buildProducts, containers } from "@/data/customize";
 import { flows } from "@/lib/customize/flows";
 import { getProduct } from "@/lib/catalog";
 import { site } from "@/data/site";
-import { cutoutImage, money, productImage, priceText } from "@/lib/utils";
+import { cutoutImage, listedPrice, money, productImage, priceText } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Make It Yours — personalized skincare & cosmetics",
@@ -136,7 +136,7 @@ export default function MakeItYoursPage() {
                         <span className="block font-display text-2xl group-hover:text-gold-light">{b.label}</span>
                         <span className="text-xs text-bone/50">{b.containers.map((c) => containers[c].label).join(" · ")}</span>
                       </span>
-                      <span className="text-sm text-bone/60">{p ? priceText(p.price) : ""}</span>
+                      <span className="text-sm text-bone/60">{p ? priceText(listedPrice(p)) : ""}</span>
                     </Link>
                   </li>
                 );

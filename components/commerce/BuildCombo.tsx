@@ -7,7 +7,7 @@ import { useMemo, useState } from "react";
 import { useStore } from "@/components/providers/StoreProvider";
 import { getAllProducts } from "@/lib/catalog";
 import { cardTypeLabel, getDepartments, primaryDepartment } from "@/lib/taxonomy";
-import { cn, money, productImage, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
+import { cn, isPricePending, money, productImage, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
 
 import { priceWhatsAppHref } from "@/components/commerce/PriceOnRequest";
 /* Build Your Own Combo — pick 2–6 ready-made products from any category,
@@ -23,7 +23,7 @@ export function BuildCombo() {
   const [picked, setPicked] = useState<string[]>([]);
   const [name, setName] = useState("My CO2 routine");
   const [done, setDone] = useState(false);
-  const all = useMemo(() => getAllProducts().filter((p) => !p.custom), []);
+  const all = useMemo(() => getAllProducts().filter((p) => !p.custom && (PRICES_ON_REQUEST || !isPricePending(p))), []);
   const list = all.filter((p) => primaryDepartment(p) === dept);
   const chosen = picked.map((s) => all.find((p) => p.slug === s)!).filter(Boolean);
   const total = chosen.reduce((t, p) => t + p.price, 0);

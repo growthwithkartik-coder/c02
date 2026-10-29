@@ -11,7 +11,7 @@ import { answerText, optLabel, questionById, visibleQuestions, chapters } from "
 import { buildPlan, getPickProduct, planSlugs, roleLabels, type Pick, type Plan, type RoutineStep } from "@/lib/consultation/engine";
 import { fetchAiStatus, useConsultResult } from "@/lib/consultation/store";
 import type { AiLayer, ConsultResult } from "@/lib/consultation/types";
-import { cn, money, productImage, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
+import { cn, isPricePending, listedPrice, money, productImage, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
 
 import { priceWhatsAppHref } from "@/components/commerce/PriceOnRequest";
 export function ConsultationResults() {
@@ -61,7 +61,7 @@ function ResultsView({ result, update, onRegenerate }: { result: ConsultResult; 
   const { addToCart, setCartOpen, toast } = useStore();
   const slugs = useMemo(() => planSlugs(plan), [plan]);
   const extras = result.extras.filter((s) => !slugs.includes(s) && getPickProduct(s));
-  const total = slugs.reduce((s, x) => s + (getPickProduct(x)?.price ?? 0), 0);
+  const total = slugs.reduce((s, x) => s + (listedPrice(getPickProduct(x)) ?? 0), 0);
   const name = plan.profile.name?.split(" ")[0];
 
   function addRoutine() {
@@ -194,7 +194,7 @@ function ResultsView({ result, update, onRegenerate }: { result: ConsultResult; 
                   <Thumb slug={s} size={64} />
                   <div className="flex-1">
                     <Link href={`/product/${s}`} className="font-medium hover:underline">{p.name}</Link>
-                    <p className="text-xs text-ink-soft">{priceText(p.price)} · {p.size}</p>
+                    <p className="text-xs text-ink-soft">{priceText(listedPrice(p))} · {p.size}</p>
                   </div>
                   <button type="button" aria-label={`Remove ${p.name} from your routine`} onClick={() => update((r) => ({ ...r, extras: r.extras.filter((x) => x !== s) }))} className="p-2 text-taupe hover:text-ink">
                     <X className="h-4 w-4" />
@@ -364,7 +364,7 @@ function PickRow({ pick, ai, label }: { pick: Pick; ai: AiLayer; label?: string 
               const a = getPickProduct(s);
               return a ? (
                 <span key={s}>
-                  <Link href={`/product/${s}`} className="text-ink-soft underline underline-offset-4 hover:text-ink">{a.name}</Link>{PRICES_ON_REQUEST ? "" : ` (${money(a.price)})`}{i < pick.alternates.length - 1 ? ", " : ""}
+                  <Link href={`/product/${s}`} className="text-ink-soft underline underline-offset-4 hover:text-ink">{a.name}</Link>{isPricePending(a) ? "" : ` (${money(a.price)})`}{i < pick.alternates.length - 1 ? ", " : ""}
                 </span>
               ) : null;
             })}
@@ -372,8 +372,8 @@ function PickRow({ pick, ai, label }: { pick: Pick; ai: AiLayer; label?: string 
         )}
       </div>
       <div className="flex flex-row items-center gap-3 md:flex-col md:items-end">
-        <p className={PRICES_ON_REQUEST ? "text-sm text-taupe" : "text-lg tabular-nums md:text-xl"}>{priceText(p.price)}</p>
-        {PRICES_ON_REQUEST ? (
+        <p className={isPricePending(p) ? "text-sm text-taupe" : "text-lg tabular-nums md:text-xl"}>{priceText(listedPrice(p))}</p>
+        {isPricePending(p) ? (
           <a target="_blank" rel="noopener noreferrer" data-whatsapp-price href={priceWhatsAppHref(p.name)} className="btn btn-primary btn-sm" data-request-price>Request price</a>
         ) : (
         <button
@@ -422,7 +422,7 @@ function CustomFormulaBlock({ plan }: { plan: Plan }) {
             {c.reasons.map((r) => <li key={r} className="flex gap-2.5"><Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-light" />{r}</li>)}
           </ul>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            {PRICES_ON_REQUEST ? (
+            {isPricePending(p) ? (
               <a target="_blank" rel="noopener noreferrer" data-whatsapp-price href={priceWhatsAppHref(`${p.name} — ${Object.entries(c.options).map(([k, v]) => `${k}: ${v}`).join("; ")}`)} className="btn btn-gold" data-request-price>Request formula price</a>
             ) : (
             <button

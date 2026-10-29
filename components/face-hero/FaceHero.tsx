@@ -20,7 +20,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
    A sticky stage (220vh) where the Muse, the hero product and the
    headline move on independent scroll curves:
    - Muse eases in from the left, then slowly scales and drifts away
-   - the 24K Gold Face Elixir floats at her lips and rises toward her
+   - the 24K Gold Serum floats at her lips and rises toward her
    - the headline splits apart; a product panel resolves in its place
 ------------------------------------------------------------------- */
 export function FaceHero() {

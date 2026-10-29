@@ -3,7 +3,7 @@ import Link from "next/link";
 import { HeroAddButton } from "./HeroAddButton";
 import { site } from "@/data/site";
 import { getDepartments } from "@/lib/taxonomy";
-import { money, productImage, priceText } from "@/lib/utils";
+import { listedPrice, money, productImage, priceText } from "@/lib/utils";
 import type { Product } from "@/types";
 
 /* Homepage hero — split layout so the image never covers the headline,
@@ -11,7 +11,7 @@ import type { Product } from "@/types";
 
    PORTRAIT: the right-hand frame shows the approved AI-generated (or
    photographed) beauty portrait `hero-model` from data/campaign-images.json.
-   Until one is approved it shows the real 24K Gold Face Elixir campaign
+   Until one is approved it shows the real 24K Gold Serum campaign
    photograph instead — never an illustration or a placeholder face. */
 export function HomeHero({ portrait, product }: { portrait: { src: string; alt: string; ai: boolean } | null; product: Product }) {
   const depts = getDepartments();
@@ -60,7 +60,7 @@ export function HomeHero({ portrait, product }: { portrait: { src: string; alt: 
             <div className="min-w-0 flex-1">
               <p className="text-[0.6875rem] uppercase tracking-[0.14em] text-taupe">Signature serum</p>
               <Link href={`/product/${product.slug}`} className="block truncate font-display text-xl leading-tight hover:text-gold-deep">{product.name}</Link>
-              <p className="text-sm text-taupe">{priceText(product.price)}</p>
+              <p className="text-sm text-taupe">{priceText(listedPrice(product))}</p>
             </div>
             <HeroAddButton slug={product.slug} name={product.name} />
           </div>

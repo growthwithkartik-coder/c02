@@ -7,11 +7,12 @@ import type { Product } from "@/types";
 import { useStore } from "@/components/providers/StoreProvider";
 import { useTryOn } from "@/components/tryon/TryOnProvider";
 import { ProductImage } from "@/components/ui/ProductImage";
-import { Badge, Price, Rating } from "@/components/ui/primitives";
+import { Badge, Rating } from "@/components/ui/primitives";
+import { CardSizePrice } from "@/components/ui/SizePrice";
 import { cn } from "@/lib/utils";
 import { cardTypeLabel, supportsTryOn } from "@/lib/taxonomy";
-import { isCustomizable, sampleFor } from "@/lib/commerce";
-import { isPricePending, PRICE_ON_REQUEST_LABEL, PRICE_ON_REQUEST_NOTE } from "@/lib/utils";
+import { isCustomizable } from "@/lib/commerce";
+import { isPricePending } from "@/lib/utils";
 
 /* ------------------------------------------------------------------
    Product card. Every card has the same structure so grids align:
@@ -105,8 +106,6 @@ export function ProductCard({
         {!compact && <p className={cn("mt-1.5 line-clamp-2 text-[0.8125rem] leading-snug", dark ? "text-bone/60" : "text-ink-soft")}>{product.shortDescription}</p>}
 
         <div className={cn("mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs", dark ? "text-bone/45" : "text-taupe")}>
-          <span>{product.size.split("/")[0].trim()}</span>
-          {!compact && sampleFor(product.slug) && <span className="inline-flex items-center gap-1">· Travel size {sampleFor(product.slug)!.size}</span>}
           {product.shades.length > 0 && (
             <span className="inline-flex items-center gap-1.5">
               {product.shades.map((s) => (
@@ -119,14 +118,7 @@ export function ProductCard({
         </div>
 
         <div className="mt-auto pt-4">
-          {pending ? (
-            <p className={cn("text-[0.95rem] font-medium", dark ? "text-bone" : "text-ink")} data-price-pending>
-              {PRICE_ON_REQUEST_LABEL}
-              {!compact && <span className={cn("block text-xs font-normal", dark ? "text-bone/50" : "text-taupe")}>{PRICE_ON_REQUEST_NOTE}</span>}
-            </p>
-          ) : (
-            <Price product={product} className={cn("block text-[0.95rem] font-medium", dark ? "text-bone" : "text-ink")} />
-          )}
+          <CardSizePrice product={product} dark={dark} compact={compact} />
           <div className={cn("mt-3 flex gap-2", compact && "mt-2")}>
             {pending ? (
               <Link

@@ -36,11 +36,11 @@ export function Philosophy() {
           <div className="relative h-[520px] md:h-[680px] lg:col-span-7">
             <motion.div className="absolute left-0 top-0 h-[64%] w-[58%] overflow-hidden" style={reduce ? undefined : { y: y1 }}>
               <motion.div className="relative h-full w-full" style={reduce ? undefined : { scale }}>
-                <Image src={productImage("24k-gold-face-elixir-1")} alt="24K Gold Face Elixir on warm marble" fill sizes="(max-width:1024px) 60vw, 35vw" className="object-contain" />
+                <Image src={productImage("24k-gold-face-elixir-1")} alt="24K Gold Serum on warm marble" fill sizes="(max-width:1024px) 60vw, 35vw" className="object-contain" />
               </motion.div>
             </motion.div>
             <motion.div className="absolute right-0 top-[18%] h-[48%] w-[40%] overflow-hidden" style={reduce ? undefined : { y: y2 }}>
-              <Image src={productImage("noir-charcoal-mask-1")} alt="Noir Charcoal Mask with bamboo charcoal" fill sizes="(max-width:1024px) 40vw, 25vw" className="object-contain" />
+              <Image src={productImage("noir-charcoal-mask-1")} alt="Charcoal Face Mask with bamboo charcoal" fill sizes="(max-width:1024px) 40vw, 25vw" className="object-contain" />
             </motion.div>
             <motion.div className="absolute bottom-0 left-[28%] h-[40%] w-[38%] overflow-hidden" style={reduce ? undefined : { y: y3 }}>
               <Image src={productImage("gloss-chocolate-dream-2")} alt="Chocolate Dream lip gloss" fill sizes="(max-width:1024px) 40vw, 22vw" className="object-contain" />

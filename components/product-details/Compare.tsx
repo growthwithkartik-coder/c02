@@ -7,7 +7,8 @@ import { useStore } from "@/components/providers/StoreProvider";
 import { Overlay } from "@/components/ui/Overlay";
 import { ProductImage } from "@/components/ui/ProductImage";
 import { getProducts, typeLabel } from "@/lib/catalog";
-import { PRICE_ON_REQUEST_TEXT } from "@/lib/utils";
+import { listedPrice, priceText } from "@/lib/utils";
+import { sampleFor } from "@/lib/commerce";
 
 /* Compare up to three products side by side (enabled on the shop page). */
 export function CompareTray() {
@@ -15,8 +16,12 @@ export function CompareTray() {
   const items = getProducts(compare);
 
   const rows: { label: string; get: (p: (typeof items)[number]) => React.ReactNode }[] = [
-    { label: "Price", get: (p) => PRICE_ON_REQUEST_TEXT },
-    { label: "Size", get: (p) => p.size },
+    { label: "Full-size price", get: (p) => priceText(listedPrice(p)) },
+    { label: "Net weight", get: (p) => p.size },
+    // travel row only when every compared product has a travel size — never a blank or "NA" cell
+    ...(items.length && items.every((p) => sampleFor(p.slug) && listedPrice(p) != null)
+      ? [{ label: "Travel size", get: (p: (typeof items)[number]) => `${sampleFor(p.slug)!.size} · ${priceText(sampleFor(p.slug)!.price)}` }]
+      : []),
     { label: "Type", get: (p) => typeLabel(p.type) },
     { label: "Texture", get: (p) => p.texture || "—" },
     { label: "Finish", get: (p) => p.finish || "—" },

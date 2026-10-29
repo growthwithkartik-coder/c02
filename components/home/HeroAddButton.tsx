@@ -5,13 +5,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useStore } from "@/components/providers/StoreProvider";
-import { PRICES_ON_REQUEST } from "@/lib/utils";
+import { isPricePending, PRICES_ON_REQUEST } from "@/lib/utils";
 import { getProduct } from "@/lib/catalog";
 
 export function HeroAddButton({ slug, name }: { slug: string; name: string }) {
   const { addToCart } = useStore();
   const [done, setDone] = useState(false);
-  if (PRICES_ON_REQUEST) {
+  if (PRICES_ON_REQUEST || isPricePending(getProduct(slug))) {
     const p = getProduct(slug);
     return (
       <Link href={p ? `/product/${p.slug}` : "/shop"} className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-ink text-bone transition-colors hover:bg-gold hover:text-carbon" aria-label={`${name} — view product, price on request`}>

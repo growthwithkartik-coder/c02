@@ -42,12 +42,12 @@ export const campaignScenes: CampaignScene[] = [
     person:
       "a South Asian woman in her late twenties with warm medium-deep skin, natural brows, softly defined eyes, bare luminous skin with real visible pores and fine texture, dark hair pulled back into a low sleek knot, small gold stud earrings",
     action:
-      "a calm, confident beauty-campaign portrait from the chest up, head turned three-quarters toward the light, eyes looking just past the camera, lips relaxed and closed, one hand lightly holding the CO2 24K Gold Face Elixir dropper bottle at collarbone height with relaxed, anatomically correct fingers",
+      "a calm, confident beauty-campaign portrait from the chest up, head turned three-quarters toward the light, eyes looking just past the camera, lips relaxed and closed, one hand lightly holding the CO2 24K Gold Serum dropper bottle at collarbone height with relaxed, anatomically correct fingers",
     setting:
       "warm bone-to-beige seamless studio backdrop with a soft gradient, large soft key light from the left, gentle gold bounce fill, subtle window-shadow pattern on the backdrop",
     direction:
       "High-end cosmetics campaign, photographed not rendered. Real skin with natural micro-texture, peach fuzz and slight sheen on the high points of the face; no smoothing. Natural eyes with catchlights, symmetrical natural features, natural teeth hidden (lips closed), five natural fingers. Colour palette: bone, warm beige, charcoal, muted gold (#B8924F). Vertical 2:3 composition, subject centred with the eyes on the upper third.",
-    alt: "CO2 campaign portrait: a woman with luminous skin holds the 24K Gold Face Elixir",
+    alt: "CO2 campaign portrait: a woman with luminous skin holds the 24K Gold Serum",
   },
   {
     id: "lip-model",
@@ -73,7 +73,7 @@ export const campaignScenes: CampaignScene[] = [
     person: "a woman in her early thirties with deep brown skin, natural visible skin texture and pores, short natural hair, no visible makeup",
     action: "holding the glass dropper bottle in one hand and pressing a drop of the clear, gold-flecked serum onto her cheekbone with the other fingertips",
     setting: "warm bone-coloured studio wall, soft directional window light from the right",
-    alt: "A woman presses a drop of CO2 24K Gold Face Elixir onto her cheekbone",
+    alt: "A woman presses a drop of CO2 24K Gold Serum onto her cheekbone",
   },
   {
     id: "noir-mask",
@@ -83,7 +83,7 @@ export const campaignScenes: CampaignScene[] = [
     person: "an East Asian person in their mid-twenties with short hair, the black charcoal mask applied evenly over the face, avoiding eyes and lips",
     action: "holding the mask tube near their collarbone, relaxed, eyes open",
     setting: "charcoal-grey backdrop, soft top light",
-    alt: "A person wearing CO2 Noir Charcoal Mask holds the tube",
+    alt: "A person wearing CO2 Charcoal Face Mask holds the tube",
   },
   {
     id: "coco-body",
@@ -93,7 +93,7 @@ export const campaignScenes: CampaignScene[] = [
     person: "a woman in her thirties with medium-brown skin wearing a simple sleeveless cream top",
     action: "smoothing lotion along her forearm, the bottle on a stone ledge beside her",
     setting: "warm beige bathroom with stone ledge, daylight",
-    alt: "A woman smooths CO2 Coco Glow Body Lotion along her forearm",
+    alt: "A woman smooths CO2 Body Moisturizing Lotion – Coco Glow along her forearm",
   },
   {
     id: "beard-oil",
@@ -103,7 +103,7 @@ export const campaignScenes: CampaignScene[] = [
     person: "a man in his fifties with dark skin and a full grey-and-black beard",
     action: "tipping a few drops of oil from the dropper bottle into his palm",
     setting: "charcoal backdrop, warm side light",
-    alt: "A man tips CO2 Groom Beard Oil into his palm",
+    alt: "A man tips CO2 Beard Oil into his palm",
   },
   {
     id: "gloss-berry-rubin",
