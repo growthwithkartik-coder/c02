@@ -10,13 +10,13 @@ import { sampling } from "@/data/sampling";
 
 export const metadata: Metadata = {
   title: "Combos & routines — better together",
-  description: "Curated CO2 routines for face, lips, body and hair — what's inside and the order to use it — price on request, as per customization. Or build your own combo.",
+  description: "Curated CO2 routines for face, lips, body and hair — what's inside, the order to use it and the set price. Or build your own combo.",
   alternates: { canonical: "/combos" },
 };
 
 export default function CombosPage() {
   const faqs = [
-    { q: "Are combos cheaper than buying separately?", a: "Combo prices are on request, as per your customization — we don't show savings that don't exist. When a combo offer runs, it will be shown here with the real terms." },
+    { q: "Are combos cheaper than buying separately?", a: "No — a combo costs the sum of its products' listed prices, and we don't show savings that don't exist. When a combo offer runs, it will be shown here with the real terms." },
     { q: "Can I customize a combo?", a: "Some steps can be swapped for a made-to-order formula — look for “can be customized” on the combo. The made-to-order item is then built and confirmed in Make It Yours." },
     { q: "Are travel sizes available for combos?", a: sampling.enabled ? "Many combo products have travel sizes. The Sampling Studio has ready-made sample sets, including a Travel Beauty Kit." : "Not at the moment." },
     { q: "How are combos added to my bag?", a: "Each product is added as its own line (marked with the combo name), so you can change quantities or remove one item." },
@@ -31,7 +31,7 @@ export default function CombosPage() {
               <LineReveal immediate lines={["Better together.", <span key="c" className="italic text-gold-deep">Curated for your routine.</span>]} />
             </h1>
             <div className="lg:col-span-4">
-              <p className="text-ink-soft">{combos.length} sets built from real CO2 products, each showing what&apos;s inside and the order to use it. Price on request, as per customization.</p>
+              <p className="text-ink-soft">{combos.length} sets built from real CO2 products, each showing what&apos;s inside, the order to use it and the set price.</p>
               <a href="#build" className="btn btn-primary mt-6">Build your own combo</a>
             </div>
           </div>

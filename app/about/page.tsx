@@ -100,7 +100,7 @@ export default function AboutPage() {
       <section className="bg-bone-2 py-section" aria-labelledby="personal">
         <div className="container-site grid gap-12 lg:grid-cols-12 lg:items-center">
           <div className="relative aspect-[4/5] bg-stone lg:col-span-5">
-            <Image src={cutoutImage("renew-firming-cream")} alt="CO2 Renew Firming Cream" fill sizes="(max-width:1024px) 92vw, 40vw" className="object-contain p-[12%] drop-shadow-[0_30px_30px_rgba(17,16,13,.25)]" />
+            <Image src={cutoutImage("renew-firming-cream")} alt="CO2 Anti-Aging Cream" fill sizes="(max-width:1024px) 92vw, 40vw" className="object-contain p-[12%] drop-shadow-[0_30px_30px_rgba(17,16,13,.25)]" />
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="eyebrow text-taupe">02 · What personalization means to us</p>
@@ -168,7 +168,7 @@ export default function AboutPage() {
           <div className="lg:col-span-6">
             <p className="eyebrow text-taupe">06 · Our sampling philosophy</p>
             <h2 id="sample" className="mt-3 font-display text-display-sm">Your next favourite shouldn&apos;t be a guessing game.</h2>
-            <p className="mt-4 text-ink-soft">Texture is personal. So {Object.keys(sampling.items).length} of our formulas come in travel sizes, with prices on request as per your customization — no &ldquo;free&rdquo; samples with strings attached. Try the texture, then choose the full size if you love it.</p>
+            <p className="mt-4 text-ink-soft">Texture is personal. So {Object.keys(sampling.items).length} of our formulas come in travel sizes, each with its own listed price — no &ldquo;free&rdquo; samples with strings attached. Try the texture, then choose the full size if you love it.</p>
             <Link href="/sampling" className="btn btn-primary mt-8">Visit the Sampling Studio</Link>
           </div>
           <ul className="grid grid-cols-3 gap-3 lg:col-span-6" aria-hidden>
@@ -194,7 +194,7 @@ export default function AboutPage() {
           <ul className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:col-span-8">
             {[
               ["Honest recommendations", "Cosmetic suggestions only — never a diagnosis, never a promised result."],
-              ["Prices on request", "Every product, travel size, set and made-to-order formula is quoted as per your customization — before you commit to anything."],
+              ["Clear prices", "Every ready-made product shows its full-size price and net weight, and its travel size where one exists. Made-to-order formulas are quoted as per your customization."],
               ["Your say in the details", "Formula options and packaging chosen by you, confirmed with you before anything is made."],
               ["Real people", "Questions about a formula, a shade or an order go to our team on WhatsApp or email."],
             ].map(([t, d]) => (

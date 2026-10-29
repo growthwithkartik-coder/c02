@@ -24,7 +24,7 @@ const breakerFor: Record<DepartmentId, BreakerId> = { skin: "samples", hair: "qu
 
 const faqsFor: Record<DepartmentId, { q: string; a: string }[]> = {
   skin: [
-    { q: "How do I choose between a serum and a treatment cream?", a: "Serums are fluid and layer under moisturizer; treatment creams (like the Clarité creams) can be used on their own or under a moisturizer. The Face & Skin consultation suggests where each fits." },
+    { q: "How do I choose between a serum and a treatment cream?", a: "Serums are fluid and layer under moisturizer; treatment creams (like the Acne n Pimple Cream) can be used on their own or under a moisturizer. The Face & Skin consultation suggests where each fits." },
     { q: "Do you make sunscreen?", a: "Yes — Sunscreen Lotion SPF 50+ (daily sun protection lotion) and a Moisturizing Cream with SPF. Apply generously and reapply through the day." },
     { q: "Can I shop by skin concern?", a: "Yes — use the concern filter. Concerns are grouped from each product's listed ingredients and pack text; they're cosmetic groupings, not medical claims." },
   ],
@@ -34,7 +34,7 @@ const faqsFor: Record<DepartmentId, { q: string; a: string }[]> = {
     { q: "Are shampoos and hair oils grouped together?", a: "Yes — use the Shampoos and Hair oils sections at the top of this page, or filter by product type." },
   ],
   body: [
-    { q: "Which body lotion is lightest?", a: "Aloe Veil, Coco Glow and Tulasi Balance are light lotions; the Décolleté cream is richer. Filter by product type or try travel sizes first." },
+    { q: "Which body lotion is lightest?", a: "The Body Moisturizing Lotions (Aloe Fresh, Coco Glow and Herbal) are light; the Breast Cream is richer. Filter by product type or try travel sizes first." },
     { q: "Are there travel sizes for body care?", a: "Yes — several lotions, gels and washes come in travel sizes. Body soaps don't." },
     { q: "Can I get a body lotion made my way?", a: "You can send a request for a custom body lotion, oil or wash in Make It Yours. We reply with what's possible and a price first." },
   ],

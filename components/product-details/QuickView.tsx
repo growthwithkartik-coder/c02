@@ -6,7 +6,8 @@ import { useState } from "react";
 import { useStore } from "@/components/providers/StoreProvider";
 import { Overlay } from "@/components/ui/Overlay";
 import { ProductImage } from "@/components/ui/ProductImage";
-import { Price, Rating } from "@/components/ui/primitives";
+import { Rating } from "@/components/ui/primitives";
+import { DetailSizePrice } from "@/components/ui/SizePrice";
 import { ProductPurchase } from "./ProductPurchase";
 import { getProduct, typeLabel } from "@/lib/catalog";
 import { cn } from "@/lib/utils";
@@ -47,11 +48,8 @@ export function QuickView() {
             </div>
             <h2 className="mt-2 font-display text-4xl leading-[0.98] md:text-5xl">{product.name}</h2>
             <p className="mt-1 text-sm text-ink-soft">{product.subtitle}</p>
-            <div className="mt-4 flex items-center gap-4">
-              <Price product={product} className="text-lg" />
-              <span className="text-sm text-taupe">{product.size}</span>
-              <Rating product={product} />
-            </div>
+            <DetailSizePrice product={product} className="mt-4" />
+            {product.rating && product.reviewCount ? <div className="mt-3 flex items-center gap-4"><Rating product={product} /></div> : null}
             <p className="mt-5 text-[0.95rem] leading-relaxed text-ink-soft">{product.description}</p>
             {product.benefits.length > 0 && (
               <ul className="mt-5 flex flex-wrap gap-2">

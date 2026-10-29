@@ -14,7 +14,7 @@ import { site } from "@/data/site";
 import { getProduct } from "@/lib/catalog";
 import { packagingSurcharge } from "@/lib/commerce";
 import { miy, notifyMiy, uid } from "@/lib/customize/store";
-import { cn, money, productImage, PRICES_ON_REQUEST } from "@/lib/utils";
+import { cn, money, productImage, CUSTOM_PRICES_ON_REQUEST as PRICES_ON_REQUEST } from "@/lib/utils";
 import type { PackSpec } from "@/components/miy/PackagingViewer";
 
 const PackagingViewer = dynamic(() => import("@/components/miy/PackagingViewer").then((m) => m.PackagingViewer), {

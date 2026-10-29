@@ -22,8 +22,9 @@ import { customizationFor, sampleFor } from "@/lib/commerce";
 import { cautions, combosFor, concernLabels, productFaqs, routinePlace, whenToUse } from "@/lib/product-content";
 import { containers, packColours } from "@/data/customize";
 import { site } from "@/data/site";
-import { isPricePending, money, priceText, productImage, PRICES_ON_REQUEST } from "@/lib/utils";
+import { CUSTOM_PRICES_ON_REQUEST, isPricePending, money, priceText, productImage, PRICES_ON_REQUEST } from "@/lib/utils";
 import { ProductTryOn } from "@/components/tryon/ProductTryOn";
+import { DetailSizePrice } from "@/components/ui/SizePrice";
 
 // Only catalogue products (and made-to-order formulas, which redirect to the
 // builder) have pages; any other slug — e.g. a removed product — is a hard 404.
@@ -156,9 +157,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <p className="eyebrow mt-4 text-taupe">{dept.title} · {cardTypeLabel(p)}</p>
             <h1 className="mt-3 font-display text-[clamp(2.75rem,5vw,4.75rem)] leading-[0.92]">{p.name}</h1>
             <p className="mt-2 text-ink-soft">{p.subtitle}</p>
-            <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
-              <Price product={p} className="text-2xl" />
-              <span className="text-sm text-taupe">{p.size}</span>
+            <DetailSizePrice product={p} className="mt-5" />
+            <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
               <a href="#reviews" className="hover:underline"><Rating product={p} showEmpty /></a>
             </div>
             <p className="mt-2 flex items-center gap-2 text-sm"><span className={p.availability === "out-of-stock" ? "h-2 w-2 rounded-full bg-red-600" : pending ? "h-2 w-2 rounded-full bg-gold" : "h-2 w-2 rounded-full bg-leaf"} aria-hidden /> {availability}</p>
@@ -333,7 +333,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 </ul>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <Link href={buildHref(cz.id, { from: p.custom ? undefined : p.slug })} className="btn btn-gold">Customize this product</Link>
-                  <p className="text-sm text-bone/60">{PRICES_ON_REQUEST ? "Price on request · as per customization — quoted before anything is made" : cz.mode === "listed" && czProduct ? `From ${money(czProduct.price)} · confirmed with you before it's prepared` : "On request · quoted before anything is made"}</p>
+                  <p className="text-sm text-bone/60">{PRICES_ON_REQUEST || CUSTOM_PRICES_ON_REQUEST ? "Price on request · as per customization — quoted before anything is made" : cz.mode === "listed" && czProduct ? `From ${money(czProduct.price)} · confirmed with you before it's prepared` : "On request · quoted before anything is made"}</p>
                 </div>
               </>
             ) : (
@@ -353,26 +353,17 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {/* 9. try a sample */}
+      {/* 9. try a sample — only when the price sheet lists a travel size */}
+      {sample && (
       <section className="container-site pt-section">
         <div className="grid gap-8 border border-line p-7 md:grid-cols-12 md:items-center md:p-10">
           <div className="md:col-span-7">
             <p className="eyebrow text-taupe">{nextSection()} · Try a sample</p>
-            {sample ? (
-              <>
-                <h2 className="mt-3 font-display text-display-sm">Try the travel size first.</h2>
-                <p className="mt-3 max-w-lg text-sm text-ink-soft">The same {p.name} in a {sample.size} travel pack — enough to get to know the texture before choosing the {p.size.split("/")[0].trim()} full size.</p>
-              </>
-            ) : (
-              <>
-                <h2 className="mt-3 font-display text-display-sm">No travel size for this one — yet.</h2>
-                <p className="mt-3 max-w-lg text-sm text-ink-soft">{supportsTryOn(p) ? "Try the shade on your own face instead with the virtual try-on above." : "Browse the travel sizes that are available in the Sampling Studio."}</p>
-              </>
-            )}
+            <h2 className="mt-3 font-display text-display-sm">Try the travel size first.</h2>
+            <p className="mt-3 max-w-lg text-sm text-ink-soft">The same {p.name} in a {sample.size} travel pack — enough to get to know the texture before choosing the {p.size.split("/")[0].trim()} full size.</p>
           </div>
           <div className="md:col-span-5">
-            {sample ? (
-              <div className="grid grid-cols-2 gap-px bg-line text-sm">
+            <div className="grid grid-cols-2 gap-px bg-line text-sm">
                 <div className="bg-bone p-4"><p className="label">Travel size</p><p className="mt-1 font-display text-2xl">{sample.size}</p><p className="tabular-nums">{priceText(sample.price)}</p></div>
                 <div className="bg-bone p-4"><p className="label">Full size</p><p className="mt-1 font-display text-2xl">{p.size.split("/")[0].trim()}</p><p className="tabular-nums">{priceText(p.price)}</p></div>
                 <div className="col-span-2 flex flex-wrap items-center gap-3 bg-bone p-4">
@@ -380,12 +371,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                   <Link href="/sampling" className="text-xs underline underline-offset-4">Sampling Studio</Link>
                 </div>
               </div>
-            ) : (
-              <Link href="/sampling" className="btn btn-outline">Visit the Sampling Studio</Link>
-            )}
+
           </div>
         </div>
       </section>
+      )}
 
       {/* 10. complete the routine */}
       {routine.length > 1 && (

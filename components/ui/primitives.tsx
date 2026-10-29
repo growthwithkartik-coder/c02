@@ -7,7 +7,7 @@ import { cn, money, isPricePending, PRICES_ON_REQUEST, PRICE_ON_REQUEST_LABEL } 
 import type { Product } from "@/types";
 
 export function Price({ product, className }: { product: Pick<Product, "price" | "compareAtPrice"> & { availability?: string }; className?: string }) {
-  if (PRICES_ON_REQUEST || (product.availability && isPricePending({ availability: product.availability }))) {
+  if (PRICES_ON_REQUEST || (product.availability && isPricePending(product as { availability: string; custom?: unknown; category?: string }))) {
     return <span className={cn("text-taupe", className)} data-price-pending>{PRICE_ON_REQUEST_LABEL}</span>;
   }
   return (

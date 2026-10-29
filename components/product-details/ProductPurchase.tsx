@@ -114,7 +114,7 @@ export const ProductPurchase = forwardRef<HTMLDivElement, { product: Product; co
                 className={cn("flex flex-col items-start border px-4 py-3 text-left transition-colors", size === id ? "border-ink bg-ink text-bone" : "border-line hover:border-ink")}
               >
                 <span className="text-[0.6875rem] uppercase tracking-[0.16em] opacity-70">{label}</span>
-                <span className="mt-1 text-sm">{sz}{!pending && <> · <span className="tabular-nums">{money(price)}</span></>}</span>
+                <span className="mt-1 text-sm">{sz}{!pending && <span className="sr-only"> · {money(price)}</span>}</span>
               </button>
             ))}
           </div>

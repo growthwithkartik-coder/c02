@@ -13,7 +13,7 @@ import { site } from "@/data/site";
 import { getIngredientLibrary, getProduct, getProducts } from "@/lib/catalog";
 import { productsInDepartment } from "@/lib/taxonomy";
 import { sampleFor, setPrice } from "@/lib/commerce";
-import { cn, cutoutImage, money, productImage, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
+import { cn, cutoutImage, isPricePending, listedPrice, money, productImage, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
 
 /* ------------------------------------------------------------------
    Homepage sections (2026 redesign). Server components; interactive
@@ -59,10 +59,10 @@ export function Hero() {
           <div className="absolute inset-x-[6%] bottom-0 top-[4%] rounded-t-[999px] bg-gradient-to-b from-stone to-stone-2 lg:inset-x-[10%]" aria-hidden />
           <div className="absolute inset-x-[6%] bottom-0 top-[4%] rounded-t-[999px] bg-[radial-gradient(60%_50%_at_50%_35%,rgba(226,198,140,.55),transparent_70%)] lg:inset-x-[10%]" aria-hidden />
           <Parallax speed={0.06} className="absolute bottom-[4%] left-1/2 h-[78%] w-[44%] -translate-x-1/2">
-            <Image src={cutoutImage("24k-gold-face-elixir")} alt="CO2 24K Gold Face Elixir" fill priority sizes="(max-width:1024px) 44vw, 22vw" className="object-contain object-bottom drop-shadow-[0_30px_30px_rgba(17,16,13,.28)]" />
+            <Image src={cutoutImage("24k-gold-face-elixir")} alt="CO2 24K Gold Serum" fill priority sizes="(max-width:1024px) 44vw, 22vw" className="object-contain object-bottom drop-shadow-[0_30px_30px_rgba(17,16,13,.28)]" />
           </Parallax>
           <Parallax speed={0.12} className="absolute bottom-[3%] left-[4%] h-[40%] w-[34%] lg:left-[6%]">
-            <Image src={cutoutImage("renew-firming-cream")} alt="CO2 Renew Firming Cream" fill sizes="(max-width:1024px) 34vw, 16vw" className="object-contain object-bottom drop-shadow-[0_24px_24px_rgba(17,16,13,.25)]" />
+            <Image src={cutoutImage("renew-firming-cream")} alt="CO2 Anti-Aging Cream" fill sizes="(max-width:1024px) 34vw, 16vw" className="object-contain object-bottom drop-shadow-[0_24px_24px_rgba(17,16,13,.25)]" />
           </Parallax>
           <Parallax speed={0.1} className="absolute bottom-[3%] right-[4%] h-[44%] w-[24%] lg:right-[8%]">
             <Image src={cutoutImage("gloss-berry-rubin")} alt="CO2 Gloss in Berry Rubin" fill sizes="(max-width:1024px) 24vw, 12vw" className="object-contain object-bottom drop-shadow-[0_24px_24px_rgba(17,16,13,.25)]" />
@@ -316,7 +316,7 @@ export function Curated() {
                 <Link href={`/make-it-yours/build?product=${p.slug}`} className="group flex items-center justify-between gap-4 py-4">
                   <span>
                     <span className="block font-display text-2xl leading-tight group-hover:text-gold-deep">{p.name}</span>
-                    <span className="text-xs text-taupe">{p.size} · {priceText(p.price)}</span>
+                    <span className="text-xs text-taupe">{p.size} · {priceText(listedPrice(p))}</span>
                   </span>
                   <ArrowRight className="h-4 w-4 shrink-0" />
                 </Link>
@@ -332,7 +332,7 @@ export function Curated() {
 
 export function ComboFeature({ combo, className, dark }: { combo: Combo; className?: string; dark?: boolean }) {
   const items = combo.items.map((i) => ({ ...i, p: getProduct(i.slug)! })).filter((i) => i.p);
-  const total = items.reduce((s, i) => s + i.p.price, 0);
+  const total = items.reduce((s, i) => s + (listedPrice(i.p) ?? 0), 0);
   return (
     <article className={cn("flex flex-col p-7 md:p-9", dark ? "bg-carbon text-bone" : "bg-stone", className)}>
       <div className="flex flex-wrap items-baseline justify-between gap-3">
@@ -351,7 +351,7 @@ export function ComboFeature({ combo, className, dark }: { combo: Combo; classNa
               </div>
               <p className="mt-2 text-[0.6875rem] uppercase tracking-[0.14em] opacity-60">{i.step} · {i.when}</p>
               <p className="text-sm leading-tight group-hover:underline">{i.p.name}</p>
-              {!PRICES_ON_REQUEST && <p className="text-xs tabular-nums opacity-70">{money(i.p.price)}</p>}
+              <p className="text-xs tabular-nums opacity-70">{priceText(listedPrice(i.p))}</p>
             </Link>
           </li>
         ))}
@@ -487,7 +487,7 @@ export function CombosSection() {
           <h2 id="combos-home" className="mt-3 font-display text-display-md">Curated for your <span className="italic">routine.</span></h2>
         </div>
         <div className="md:col-span-4 md:col-start-9">
-          <p className="text-sm text-ink-soft">Each set lists what&apos;s inside and the order to use it. Prices are on request, as per your customization — no invented savings.</p>
+          <p className="text-sm text-ink-soft">Each set lists what&apos;s inside, the order to use it and its price — the plain sum of its products, no invented savings.</p>
           <Link href="/combos" className="btn btn-outline btn-sm mt-4">Browse all combos</Link>
         </div>
       </div>

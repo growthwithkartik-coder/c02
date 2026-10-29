@@ -18,7 +18,7 @@ export const products: Product[] = [
   {
     id: "co2-001",
     slug: "24k-gold-face-elixir",
-    name: "24K Gold Face Elixir",
+    name: "24K Gold Serum",
     subtitle: "Radiance & renewal face serum",
     category: "face",
     type: "treatments",
@@ -72,8 +72,8 @@ export const products: Product[] = [
       "Press into face and neck.",
       "Follow with moisturizer. Use morning or evening."
     ],
-    size: "30 ml / 1.01 fl. oz.",
-    price: 1850,
+    size: "30 ml",
+    price: 2250,
     compareAtPrice: null,
     images: [
       "24k-gold-face-elixir-1"
@@ -180,15 +180,15 @@ export const products: Product[] = [
       "Apply a thin layer over the face or the areas you want to focus on.",
       "Use morning or evening."
     ],
-    size: "50 ml / 1.69 fl. oz.",
+    size: "100 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 780,
     compareAtPrice: null,
     images: [
       "no-marks-cream-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -226,7 +226,7 @@ export const products: Product[] = [
   {
     id: "co2-003",
     slug: "clarite-botanical-cream",
-    name: "Clarité Botanical Cream",
+    name: "Acne n Pimple Cream",
     subtitle: "Acne & pimple care with Indian botanicals",
     category: "face",
     type: "treatments",
@@ -281,7 +281,7 @@ export const products: Product[] = [
       "Use morning and evening."
     ],
     size: "100 g",
-    price: 650,
+    price: 1000,
     compareAtPrice: null,
     images: [
       "clarite-botanical-cream-1",
@@ -336,7 +336,7 @@ export const products: Product[] = [
   {
     id: "co2-004",
     slug: "renew-firming-cream",
-    name: "Renew Firming Cream",
+    name: "Anti-Aging Cream",
     subtitle: "Anti-ageing face cream",
     category: "face",
     type: "moisturizers",
@@ -391,7 +391,7 @@ export const products: Product[] = [
       "Use morning and evening."
     ],
     size: "50 g",
-    price: 890,
+    price: 1450,
     compareAtPrice: null,
     images: [
       "renew-firming-cream-1",
@@ -500,15 +500,15 @@ export const products: Product[] = [
       "Smooth evenly over face and neck.",
       "Reapply as needed during the day."
     ],
-    size: "100 ml / 3.38 fl. oz.",
+    size: "120 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 3000,
     compareAtPrice: null,
     images: [
       "moisturizing-cream-spf-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -597,15 +597,15 @@ export const products: Product[] = [
       "Warm a small amount between your fingertips.",
       "Massage into face and neck."
     ],
-    size: "50 ml / 1.69 fl. oz.",
+    size: "50 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 600,
     compareAtPrice: null,
     images: [
       "night-cream-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -641,7 +641,7 @@ export const products: Product[] = [
   {
     id: "co2-066",
     slug: "sunscreen-lotion-spf-50",
-    name: "Sunscreen Lotion SPF 50+",
+    name: "Sunscreen Lotion (SPF 50+)",
     subtitle: "Daily sun protection lotion",
     category: "face",
     type: "sun-care",
@@ -692,15 +692,15 @@ export const products: Product[] = [
       "Cover all exposed skin evenly.",
       "Reapply after swimming, sweating or towelling and as needed through the day."
     ],
-    size: "100 ml / 3.38 fl. oz.",
+    size: "100 ml",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 2650,
     compareAtPrice: null,
     images: [
       "sunscreen-lotion-spf-50-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -736,7 +736,7 @@ export const products: Product[] = [
   {
     id: "co2-010",
     slug: "neem-rose-face-wash",
-    name: "Neem Rose Face Wash",
+    name: "Aloe Neem Face Wash",
     subtitle: "Aloe neem face wash",
     category: "face",
     type: "cleansers",
@@ -788,8 +788,8 @@ export const products: Product[] = [
       "Massage a small amount over skin for 30 seconds.",
       "Rinse. Use morning and evening."
     ],
-    size: "100 ml",
-    price: 450,
+    size: "120 ml",
+    price: 825,
     compareAtPrice: null,
     images: [
       "neem-rose-face-wash-1",
@@ -842,7 +842,7 @@ export const products: Product[] = [
   {
     id: "co2-012",
     slug: "noir-charcoal-face-wash",
-    name: "Noir Charcoal Face Wash",
+    name: "Charcoal Face Wash",
     subtitle: "Deep-cleansing charcoal wash",
     category: "face",
     type: "cleansers",
@@ -851,7 +851,7 @@ export const products: Product[] = [
     lede: "Charcoal is porous by nature, which is why it's so good at lifting oil and grime.",
     story: [
       "Activated charcoal gives the wash its depth and its deep-cleansing character. Neem and tea tree add a purifying, herbal edge, and aloe vera keeps the finish comfortable.",
-      "Pair it with the Noir Charcoal Mask once or twice a week."
+      "Pair it with the Charcoal Face Mask once or twice a week."
     ],
     benefits: [
       {
@@ -897,7 +897,7 @@ export const products: Product[] = [
       "Rinse thoroughly."
     ],
     size: "120 ml",
-    price: 520,
+    price: 825,
     compareAtPrice: null,
     images: [
       "noir-charcoal-face-wash-1",
@@ -1004,15 +1004,15 @@ export const products: Product[] = [
       "Work gently over the skin.",
       "Rinse with water or wipe away, then follow with moisturizer."
     ],
-    size: "100 ml / 3.38 oz.",
+    size: "100 ml",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 625,
     compareAtPrice: null,
     images: [
       "milk-cleanser-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -1103,15 +1103,15 @@ export const products: Product[] = [
       "Massage gently for 30 seconds.",
       "Rinse well and pat dry."
     ],
-    size: "100 ml / 3.38 fl. oz.",
+    size: "120 ml",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 725,
     compareAtPrice: null,
     images: [
       "red-grapes-face-wash-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -1149,7 +1149,7 @@ export const products: Product[] = [
   {
     id: "co2-014",
     slug: "noir-charcoal-mask",
-    name: "Noir Charcoal Mask",
+    name: "Charcoal Face Mask",
     subtitle: "Deep-cleansing face mask",
     category: "face",
     type: "masks",
@@ -1158,7 +1158,7 @@ export const products: Product[] = [
     lede: "Bamboo charcoal sits at the centre of this mask, with three warming botanicals from the Indian spice cupboard.",
     story: [
       "Bamboo charcoal lifts oil and grime, while ajwain, caraway and vacha give the mask its warm, herbal character. Ten minutes is enough.",
-      "Use it once or twice a week, on its own or after the Noir Charcoal Face Wash."
+      "Use it once or twice a week, on its own or after the Charcoal Face Wash."
     ],
     benefits: [
       {
@@ -1201,7 +1201,7 @@ export const products: Product[] = [
       "Rinse with warm water. Use once or twice a week."
     ],
     size: "100 g",
-    price: 690,
+    price: 925,
     compareAtPrice: null,
     images: [
       "noir-charcoal-mask-1",
@@ -1305,15 +1305,15 @@ export const products: Product[] = [
       "Leave on until it begins to set.",
       "Rinse with lukewarm water and follow with moisturizer."
     ],
-    size: "100 g / 3.53 oz.",
+    size: "100 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 875,
     compareAtPrice: null,
     images: [
       "multani-mitti-face-mask-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -1350,7 +1350,7 @@ export const products: Product[] = [
   {
     id: "co2-068",
     slug: "herbal-scrub",
-    name: "Herbal Scrub",
+    name: "Scrub Cream – Herbal",
     subtitle: "Gentle exfoliating formula",
     category: "face",
     type: "masks",
@@ -1403,15 +1403,15 @@ export const products: Product[] = [
       "Massage gently in small circles, avoiding the eye area.",
       "Rinse well. Use once or twice a week."
     ],
-    size: "100 ml / 3.38 fl. oz.",
+    size: "100 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 825,
     compareAtPrice: null,
     images: [
       "herbal-scrub-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -1449,7 +1449,7 @@ export const products: Product[] = [
   {
     id: "co2-019",
     slug: "aloe-veil-body-lotion",
-    name: "Aloe Veil Body Lotion",
+    name: "Body Moisturizing Lotion – Aloe Fresh",
     subtitle: "Lightweight hydrating body lotion",
     category: "body",
     type: "body-care",
@@ -1502,8 +1502,8 @@ export const products: Product[] = [
       "Massage until absorbed.",
       "Use daily, especially after bathing."
     ],
-    size: "200 ml",
-    price: 520,
+    size: "100 ml",
+    price: 725,
     compareAtPrice: null,
     images: [
       "aloe-veil-body-lotion-1",
@@ -1559,7 +1559,7 @@ export const products: Product[] = [
   {
     id: "co2-020",
     slug: "coco-glow-body-lotion",
-    name: "Coco Glow Body Lotion",
+    name: "Body Moisturizing Lotion – Coco Glow",
     subtitle: "Radiance body lotion",
     category: "body",
     type: "body-care",
@@ -1611,8 +1611,8 @@ export const products: Product[] = [
       "Massage in until absorbed.",
       "Use daily."
     ],
-    size: "200 ml",
-    price: 520,
+    size: "100 ml",
+    price: 550,
     compareAtPrice: null,
     images: [
       "coco-glow-body-lotion-1",
@@ -1668,7 +1668,7 @@ export const products: Product[] = [
   {
     id: "co2-021",
     slug: "tulasi-balance-body-lotion",
-    name: "Tulasi Balance Body Lotion",
+    name: "Body Moisturizing Lotion – Herbal",
     subtitle: "Herbal body lotion",
     category: "body",
     type: "body-care",
@@ -1721,8 +1721,8 @@ export const products: Product[] = [
       "Massage in until absorbed.",
       "Use daily."
     ],
-    size: "200 ml",
-    price: 520,
+    size: "100 ml",
+    price: 550,
     compareAtPrice: null,
     images: [
       "tulasi-balance-body-lotion-1",
@@ -1778,7 +1778,7 @@ export const products: Product[] = [
   {
     id: "co2-022",
     slug: "lumiere-even-tone-lotion",
-    name: "Lumière Even-Tone Lotion",
+    name: "Brightening & Lightening Lotion",
     subtitle: "Brightening body lotion",
     category: "body",
     type: "body-care",
@@ -1830,8 +1830,8 @@ export const products: Product[] = [
       "Massage in until absorbed.",
       "Use daily and wear sunscreen on exposed skin."
     ],
-    size: "180 ml",
-    price: 590,
+    size: "100 ml",
+    price: 725,
     compareAtPrice: null,
     images: [
       "lumiere-even-tone-lotion-1",
@@ -1887,7 +1887,7 @@ export const products: Product[] = [
   {
     id: "co2-023",
     slug: "calamine-calm-lotion",
-    name: "Calamine Calm Lotion",
+    name: "Calamine Lotion",
     subtitle: "Soothing calamine lotion",
     category: "body",
     type: "body-care",
@@ -1940,7 +1940,7 @@ export const products: Product[] = [
       "Use as often as needed."
     ],
     size: "100 ml",
-    price: 420,
+    price: 680,
     compareAtPrice: null,
     images: [
       "calamine-calm-lotion-1",
@@ -1995,7 +1995,7 @@ export const products: Product[] = [
   {
     id: "co2-024",
     slug: "decollete-nourishing-cream",
-    name: "Décolleté Nourishing Cream",
+    name: "Breast Cream",
     subtitle: "Bust & décolleté cream",
     category: "body",
     type: "body-care",
@@ -2048,8 +2048,8 @@ export const products: Product[] = [
       "Massage gently with upward strokes until absorbed.",
       "Use daily, ideally in the evening."
     ],
-    size: "100 g",
-    price: 750,
+    size: "50 g",
+    price: 1625,
     compareAtPrice: null,
     images: [
       "decollete-nourishing-cream-1",
@@ -2106,7 +2106,7 @@ export const products: Product[] = [
   {
     id: "co2-025",
     slug: "aloe-pure-gel",
-    name: "Aloe Pure Gel",
+    name: "Aloe Vera Gel",
     subtitle: "Multi-use aloe vera gel",
     category: "body",
     type: "body-care",
@@ -2158,8 +2158,8 @@ export const products: Product[] = [
       "Use on face, body, after sun or after shaving.",
       "Reapply as needed."
     ],
-    size: "100 g",
-    price: 390,
+    size: "110 g",
+    price: 625,
     compareAtPrice: null,
     images: [
       "aloe-pure-gel-1",
@@ -2268,15 +2268,15 @@ export const products: Product[] = [
       "Massage in until absorbed.",
       "Use daily."
     ],
-    size: "Net wt. 100 g / 3.52 oz.",
+    size: "50 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 1000,
     compareAtPrice: null,
     images: [
       "stretch-marks-gel-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -2346,15 +2346,15 @@ export const products: Product[] = [
       "Apply a thin layer to dry areas.",
       "Use as often as needed."
     ],
-    size: "Net wt. 100 g (also shown: 50 g jar)",
+    size: "50 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 275,
     compareAtPrice: null,
     images: [
       "white-petroleum-jelly-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -2385,7 +2385,7 @@ export const products: Product[] = [
   {
     id: "co2-027",
     slug: "lavender-santal-body-wash",
-    name: "Lavender Santal Body Wash",
+    name: "Body Wash (With Lavender, Sandal & Mint Fragrances)",
     subtitle: "Aromatherapeutic body wash",
     category: "body",
     type: "body-wash",
@@ -2439,7 +2439,7 @@ export const products: Product[] = [
       "Rinse well."
     ],
     size: "270 ml",
-    price: 560,
+    price: 1000,
     compareAtPrice: null,
     images: [
       "lavender-santal-body-wash-1",
@@ -2549,15 +2549,15 @@ export const products: Product[] = [
       "Lather over the body.",
       "Rinse well."
     ],
-    size: "100 ml / 3.38 fl. oz.",
+    size: "100 ml",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 535,
     compareAtPrice: null,
     images: [
       "shower-gel-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -2595,7 +2595,7 @@ export const products: Product[] = [
   {
     id: "co2-034",
     slug: "aloe-vera-herbal-bar",
-    name: "Aloe Vera Herbal Bar",
+    name: "Herbal Soap – Aloe Vera",
     subtitle: "Gentle cleansing bathing bar",
     category: "body",
     type: "bath-bars",
@@ -2648,8 +2648,8 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "100 g / 3.52 oz.",
-    price: 260,
+    size: "75 g",
+    price: 380,
     compareAtPrice: null,
     images: [
       "aloe-vera-herbal-bar-1",
@@ -2701,7 +2701,7 @@ export const products: Product[] = [
   {
     id: "co2-035",
     slug: "lemon-zest-herbal-bar",
-    name: "Lemon Zest Herbal Bar",
+    name: "Herbal Soap – Lemon",
     subtitle: "Refreshing bathing bar",
     category: "body",
     type: "bath-bars",
@@ -2753,8 +2753,8 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "100 g / 3.52 oz.",
-    price: 260,
+    size: "75 g",
+    price: 380,
     compareAtPrice: null,
     images: [
       "lemon-zest-herbal-bar-1",
@@ -2806,7 +2806,7 @@ export const products: Product[] = [
   {
     id: "co2-036",
     slug: "mint-cool-herbal-bar",
-    name: "Mint Cool Herbal Bar",
+    name: "Herbal Soap – Mint",
     subtitle: "Cooling bathing bar",
     category: "body",
     type: "bath-bars",
@@ -2858,8 +2858,8 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "100 g / 3.52 oz.",
-    price: 260,
+    size: "75 g",
+    price: 380,
     compareAtPrice: null,
     images: [
       "mint-cool-herbal-bar-1",
@@ -2910,7 +2910,7 @@ export const products: Product[] = [
   {
     id: "co2-037",
     slug: "neem-purify-herbal-bar",
-    name: "Neem Purify Herbal Bar",
+    name: "Herbal Soap – Neem",
     subtitle: "Purifying bathing bar",
     category: "body",
     type: "bath-bars",
@@ -2967,8 +2967,8 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "100 g / 3.52 oz.",
-    price: 260,
+    size: "75 g",
+    price: 380,
     compareAtPrice: null,
     images: [
       "neem-purify-herbal-bar-1",
@@ -3020,7 +3020,7 @@ export const products: Product[] = [
   {
     id: "co2-038",
     slug: "sandal-glow-herbal-bar",
-    name: "Sandal Glow Herbal Bar",
+    name: "Herbal Soap – Sandal",
     subtitle: "Nourishing bathing bar",
     category: "body",
     type: "bath-bars",
@@ -3077,8 +3077,8 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "100 g / 3.52 oz.",
-    price: 280,
+    size: "75 g",
+    price: 380,
     compareAtPrice: null,
     images: [
       "sandal-glow-herbal-bar-1",
@@ -3131,7 +3131,7 @@ export const products: Product[] = [
   {
     id: "co2-039",
     slug: "goat-milk-herbal-bar",
-    name: "Goat Milk Herbal Bar",
+    name: "Goat Milk Soap",
     subtitle: "Nourishing bathing bar",
     category: "body",
     type: "bath-bars",
@@ -3191,8 +3191,8 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "100 g / 3.52 oz.",
-    price: 280,
+    size: "75 g",
+    price: 380,
     compareAtPrice: null,
     images: [
       "goat-milk-herbal-bar-1",
@@ -3296,15 +3296,15 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "75 g / 2.65 oz.",
+    size: "100 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 425,
     compareAtPrice: null,
     images: [
       "beetroot-soap-2"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -3407,15 +3407,15 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "75 g / 2.65 oz.",
+    size: "75 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 380,
     compareAtPrice: null,
     images: [
       "kumkumadi-soap-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -3458,9 +3458,9 @@ export const products: Product[] = [
     subtitle: "Herbal soap",
     category: "body",
     type: "bath-bars",
-    shortDescription: "A 75 g neem bathing bar — purifying, balancing and protecting.",
+    shortDescription: "A 100 g neem bathing bar — purifying, balancing and protecting.",
     description: "Neem Soap with Neem, Coconut Oil, Glycerin and Soap Base — the ingredients printed on the pack.",
-    lede: "Neem, coconut oil and glycerin in a 75 g herbal bar.",
+    lede: "Neem, coconut oil and glycerin in a 100 g herbal bar.",
     story: [
       "Key ingredients on the pack: Neem · Coconut Oil · Glycerin · Soap Base.",
       "The pack describes it as purifying, balancing and protecting."
@@ -3506,15 +3506,15 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "75 g / 2.65 oz.",
+    size: "100 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 425,
     compareAtPrice: null,
     images: [
       "neem-soap-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -3596,15 +3596,15 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "75 g / 2.65 oz.",
+    size: "100 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 425,
     compareAtPrice: null,
     images: [
       "papaya-soap-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -3691,15 +3691,15 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "75 g / 2.65 oz.",
+    size: "100 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 425,
     compareAtPrice: null,
     images: [
       "red-wine-soap-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -3736,7 +3736,7 @@ export const products: Product[] = [
   {
     id: "co2-041",
     slug: "aloe-nourish-shampoo",
-    name: "Aloe Nourish Shampoo",
+    name: "Aloe Vera Shampoo",
     subtitle: "Aloe vera shampoo",
     category: "hair",
     type: "hair-care",
@@ -3745,7 +3745,6 @@ export const products: Product[] = [
     lede: "An everyday shampoo for hair that wants to be left alone.",
     story: [
       "Aloe vera keeps the wash gentle on the scalp and leaves hair soft and manageable. The pack lists aloe vera, shampoo base, sodium benzoate and sodium methyl paraben.",
-      "A 100 ml travel bottle is pictured alongside."
     ],
     benefits: [
       {
@@ -3787,8 +3786,8 @@ export const products: Product[] = [
       "Massage into scalp and lather.",
       "Rinse thoroughly."
     ],
-    size: "200 ml",
-    price: 480,
+    size: "100 ml",
+    price: 710,
     compareAtPrice: null,
     images: [
       "aloe-nourish-shampoo-1",
@@ -3846,9 +3845,9 @@ export const products: Product[] = [
     subtitle: "Herbal soap",
     category: "body",
     type: "bath-bars",
-    shortDescription: "A 75 g sandalwood bathing bar that nourishes, brightens and soothes.",
+    shortDescription: "A 100 g sandalwood bathing bar that nourishes, brightens and soothes.",
     description: "Sandal Soap with Sandalwood (Santalum album), Coconut Oil (Cocos nucifera), Glycerin and Soap Base — the ingredients printed on the pack.",
-    lede: "Sandalwood with coconut oil and glycerin in a 75 g herbal bar.",
+    lede: "Sandalwood with coconut oil and glycerin in a 100 g herbal bar.",
     story: [
       "Key ingredients on the pack: Sandalwood (Santalum album) · Coconut Oil (Cocos nucifera) · Glycerin · Soap Base.",
       "The pack describes it as nourishes, brightens and soothes."
@@ -3894,15 +3893,15 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "75 g / 2.65 oz.",
+    size: "100 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 425,
     compareAtPrice: null,
     images: [
       "sandal-soap-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -4008,15 +4007,15 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "100 g / 3.52 oz.",
+    size: "100 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 425,
     compareAtPrice: null,
     images: [
       "sunni-pindi-soap-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -4106,15 +4105,15 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "75 g / 2.65 oz.",
+    size: "75 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 380,
     compareAtPrice: null,
     images: [
       "turmeric-soap-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -4202,15 +4201,15 @@ export const products: Product[] = [
       "Lather and massage.",
       "Rinse. Keep the bar dry between uses."
     ],
-    size: "75 g / 2.65 oz.",
+    size: "100 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 425,
     compareAtPrice: null,
     images: [
       "coffee-soap-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -4299,15 +4298,15 @@ export const products: Product[] = [
       "Lather and leave for a minute.",
       "Rinse thoroughly."
     ],
-    size: "250 ml / 8.45 fl. oz.",
+    size: "100 ml",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 490,
     compareAtPrice: null,
     images: [
       "onion-shampoo-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -4397,15 +4396,15 @@ export const products: Product[] = [
       "Lather and leave for a minute.",
       "Rinse thoroughly."
     ],
-    size: "250 ml / 8.45 fl. oz.",
+    size: "100 ml",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 625,
     compareAtPrice: null,
     images: [
       "herbal-shampoo-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -4495,15 +4494,15 @@ export const products: Product[] = [
       "Lather and leave for a minute.",
       "Rinse thoroughly."
     ],
-    size: "250 ml / 8.45 fl. oz.",
+    size: "100 ml",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 575,
     compareAtPrice: null,
     images: [
       "shikakai-shampoo-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -4540,7 +4539,7 @@ export const products: Product[] = [
   {
     id: "co2-043",
     slug: "scalp-clear-shampoo",
-    name: "Scalp Clear Shampoo",
+    name: "Anti Dandruff Shampoo",
     subtitle: "Anti-dandruff shampoo",
     category: "hair",
     type: "hair-care",
@@ -4549,7 +4548,7 @@ export const products: Product[] = [
     lede: "A scalp shampoo that clears flakes without stripping your hair.",
     story: [
       "Neem and tea tree are the clarifying pair, aloe vera soothes the scalp and amla keeps the lengths healthy-looking.",
-      "Use two or three times a week, or alternate with Aloe Nourish Shampoo. A 100 ml bottle is pictured alongside."
+      "Use two or three times a week, or alternate with Aloe Vera Shampoo."
     ],
     benefits: [
       {
@@ -4594,8 +4593,8 @@ export const products: Product[] = [
       "Massage into scalp for a minute and lather.",
       "Rinse thoroughly."
     ],
-    size: "200 ml",
-    price: 520,
+    size: "100 ml",
+    price: 800,
     compareAtPrice: null,
     images: [
       "scalp-clear-shampoo-1",
@@ -4653,7 +4652,7 @@ export const products: Product[] = [
   {
     id: "co2-044",
     slug: "scalp-clear-treatment-gel",
-    name: "Scalp Clear Treatment Gel",
+    name: "Anti-Dandruff Gel",
     subtitle: "Soothing & clarifying scalp treatment",
     category: "hair",
     type: "scalp",
@@ -4709,8 +4708,8 @@ export const products: Product[] = [
       "Massage gently.",
       "Leave on for 10 minutes before washing, or as directed."
     ],
-    size: "50 g / 1.76 oz.",
-    price: 560,
+    size: "50 g",
+    price: 670,
     compareAtPrice: null,
     images: [
       "scalp-clear-treatment-gel-1"
@@ -4760,7 +4759,7 @@ export const products: Product[] = [
   {
     id: "co2-046",
     slug: "scalp-clear-hair-oil",
-    name: "Scalp Clear Hair Oil",
+    name: "Anti-Dandruff Hair Oil",
     subtitle: "Anti-dandruff hair oil",
     category: "hair",
     type: "hair-oils",
@@ -4812,8 +4811,8 @@ export const products: Product[] = [
       "Massage into scalp and work through lengths.",
       "Leave for at least an hour, then shampoo."
     ],
-    size: "200 ml",
-    price: 520,
+    size: "100 ml",
+    price: 1500,
     compareAtPrice: null,
     images: [
       "scalp-clear-hair-oil-1",
@@ -4921,15 +4920,15 @@ export const products: Product[] = [
       "Massage into the scalp and through the lengths.",
       "Leave on for at least an hour or overnight, then wash out."
     ],
-    size: "100 ml / 3.38 fl. oz. · 200 ml / 6.76 fl. oz.",
+    size: "100 ml",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 1115,
     compareAtPrice: null,
     images: [
       "onion-hair-oil-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -4966,7 +4965,7 @@ export const products: Product[] = [
   {
     id: "co2-049",
     slug: "groom-beard-oil",
-    name: "Groom Beard Oil",
+    name: "Beard Oil",
     subtitle: "Beard care oil",
     category: "hair",
     type: "styling",
@@ -5019,7 +5018,7 @@ export const products: Product[] = [
       "Comb through."
     ],
     size: "50 ml",
-    price: 590,
+    price: 1000,
     compareAtPrice: null,
     images: [
       "groom-beard-oil-1",
@@ -5074,7 +5073,7 @@ export const products: Product[] = [
   {
     id: "co2-050",
     slug: "gloss-berry-rubin",
-    name: "Gloss Berry Rubin",
+    name: "Lip Gloss – Berry Rubin",
     subtitle: "High-shine lip gloss",
     category: "lips",
     type: "lip-gloss",
@@ -5121,8 +5120,8 @@ export const products: Product[] = [
       "Build a second layer for more colour.",
       "Reapply as you like."
     ],
-    size: "5 ml / 0.17 fl. oz.",
-    price: 650,
+    size: "4 ml",
+    price: 1995,
     compareAtPrice: null,
     images: [
       "gloss-berry-rubin-1"
@@ -5176,7 +5175,7 @@ export const products: Product[] = [
   {
     id: "co2-051",
     slug: "gloss-burgundy-spirit",
-    name: "Gloss Burgundy Spirit",
+    name: "Lip Gloss – Burgundy Spirit",
     subtitle: "High-shine lip gloss",
     category: "lips",
     type: "lip-gloss",
@@ -5223,8 +5222,8 @@ export const products: Product[] = [
       "Build a second layer for more colour.",
       "Reapply as you like."
     ],
-    size: "5 ml / 0.17 fl. oz.",
-    price: 650,
+    size: "4 ml",
+    price: 1995,
     compareAtPrice: null,
     images: [
       "gloss-burgundy-spirit-1"
@@ -5278,7 +5277,7 @@ export const products: Product[] = [
   {
     id: "co2-052",
     slug: "gloss-chocolate-dream",
-    name: "Gloss Chocolate Dream",
+    name: "Lip Gloss – Chocolate Dream",
     subtitle: "High-shine lip gloss",
     category: "lips",
     type: "lip-gloss",
@@ -5325,8 +5324,8 @@ export const products: Product[] = [
       "Build a second layer for more colour.",
       "Reapply as you like."
     ],
-    size: "5 ml / 0.17 fl. oz.",
-    price: 650,
+    size: "4 ml",
+    price: 1995,
     compareAtPrice: null,
     images: [
       "gloss-chocolate-dream-1",
@@ -5382,7 +5381,7 @@ export const products: Product[] = [
   {
     id: "co2-084",
     slug: "gloss-red-kiss",
-    name: "Gloss Red Kiss",
+    name: "Lip Gloss – Red Kiss",
     subtitle: "High-shine lip gloss",
     category: "lips",
     type: "lip-gloss",
@@ -5429,15 +5428,15 @@ export const products: Product[] = [
       "Build a second layer for more colour.",
       "Reapply as you like."
     ],
-    size: "5 ml / 0.17 fl. oz.",
+    size: "4 ml",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 1995,
     compareAtPrice: null,
     images: [
       "gloss-red-kiss-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -5477,7 +5476,7 @@ export const products: Product[] = [
   {
     id: "co2-085",
     slug: "gloss-secret-rose",
-    name: "Gloss Secret Rose",
+    name: "Lip Gloss – Secret Rose",
     subtitle: "High-shine lip gloss",
     category: "lips",
     type: "lip-gloss",
@@ -5524,15 +5523,15 @@ export const products: Product[] = [
       "Build a second layer for more colour.",
       "Reapply as you like."
     ],
-    size: "5 ml / 0.17 fl. oz.",
+    size: "4 ml",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 1995,
     compareAtPrice: null,
     images: [
       "gloss-secret-rose-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -5580,7 +5579,7 @@ export const products: Product[] = [
     description: "A bullet lipstick in a faceted rose-gold case, in seven shades: Secret Rose, a deep rose pink; Coral Crush, a warm coral red; Chocolate Dream, a rich cocoa brown; Berry Rubin, a deep berry wine; Burgundy Spirit, a rosy burgundy; and Red Kiss, a true red in a matte or a glossy finish.",
     lede: "Seven shades, one faceted case.",
     story: [
-      "Every shade comes in the same faceted rose-gold case and carton, 6 ml.",
+      "Every shade comes in the same faceted rose-gold case and carton, 4 g.",
       "Not sure which one suits you? Try every shade on your own lips with the virtual try-on before you choose."
     ],
     benefits: [],
@@ -5590,9 +5589,9 @@ export const products: Product[] = [
       "Apply from the centre of the lip outwards.",
       "Build a second layer for more colour."
     ],
-    size: "6 ml",
+    size: "4 g",
     // PRICE NOT YET SUPPLIED — set the INR price and change availability to "in-stock" to make it orderable.
-    price: 0,
+    price: 2245,
     compareAtPrice: null,
     images: [
       "lipstick-secret-rose-1",
@@ -5603,7 +5602,7 @@ export const products: Product[] = [
       "lipstick-red-kiss-1"
     ],
     cutout: null,
-    availability: "price-pending",
+    availability: "in-stock",
     rating: null,
     reviewCount: 0,
     reviews: [],
@@ -5626,7 +5625,7 @@ export const products: Product[] = [
       },
       {
         label: "On pack",
-        value: "CO2 Cosmetics · Lipstick · 6 ml"
+        value: "CO2 Cosmetics · Lipstick · 4 g"
       }
     ],
     shades: [

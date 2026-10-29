@@ -15,7 +15,7 @@ import { getProduct } from "@/lib/catalog";
 import { cardTypeLabel } from "@/lib/taxonomy";
 import { customizationFor, sampleFor } from "@/lib/commerce";
 import { useTryOn } from "@/components/tryon/TryOnProvider";
-import { cn, money, productImage, PRICES_ON_REQUEST } from "@/lib/utils";
+import { cn, CUSTOM_PRICES_ON_REQUEST, isPricePending, listedPrice, money, productImage, PRICES_ON_REQUEST } from "@/lib/utils";
 import { buildHref } from "@/components/miy/links";
 
 import { priceWhatsAppHref } from "@/components/commerce/PriceOnRequest";
@@ -194,9 +194,9 @@ export function Results({ flowId }: { flowId: FlowId }) {
                     </div>
                     <div className="flex flex-col gap-3 md:col-span-4 md:border-l md:border-line md:pl-6">
                       <dl className="grid grid-cols-2 gap-y-2 text-sm">
-                        <dt className="text-taupe">Full size</dt><dd className="text-right">{p.size.split("/")[0]}{PRICES_ON_REQUEST ? "" : ` · ${money(p.price)}`}</dd>
-                        <dt className="text-taupe">Travel size</dt><dd className="text-right">{s ? (PRICES_ON_REQUEST ? s.size : `${s.size} · ${money(s.price)}`) : "Not available"}</dd>
-                        {PRICES_ON_REQUEST && <><dt className="text-taupe">Price</dt><dd className="text-right">On request</dd></>}
+                        <dt className="text-taupe">Full size</dt><dd className="text-right">{p.size.split("/")[0]}{isPricePending(p) ? "" : ` · ${money(p.price)}`}</dd>
+                        {s && <><dt className="text-taupe">Travel size</dt><dd className="text-right">{PRICES_ON_REQUEST ? s.size : `${s.size} · ${money(s.price)}`}</dd></>}
+                        {isPricePending(p) && <><dt className="text-taupe">Price</dt><dd className="text-right">On request</dd></>}
                         <dt className="text-taupe">Customizable</dt><dd className="text-right">{c ? (c.mode === "listed" ? "Made to order" : "On request") : "No"}</dd>
                       </dl>
                       <label className="mt-2 flex cursor-pointer items-center gap-2 text-sm">
@@ -239,7 +239,7 @@ export function Results({ flowId }: { flowId: FlowId }) {
                 const shown = Object.entries(c.prefill).filter(([k, v]) => v && !k.startsWith("_")).slice(0, 4);
                 return (
                   <li key={c.buildId} className="flex flex-col border border-line-dark p-6">
-                    <p className="text-[0.6875rem] uppercase tracking-[0.16em] text-gold-light">{PRICES_ON_REQUEST ? `${bp.mode === "listed" ? "Made to order" : "On request"} · price as per customization` : bp.mode === "listed" ? `Made to order · ${p ? money(p.price) : ""}` : "On request · price confirmed after review"}</p>
+                    <p className="text-[0.6875rem] uppercase tracking-[0.16em] text-gold-light">{CUSTOM_PRICES_ON_REQUEST || PRICES_ON_REQUEST ? `${bp.mode === "listed" ? "Made to order" : "On request"} · price as per customization` : bp.mode === "listed" ? `Made to order · ${p ? money(p.price) : ""}` : "On request · price confirmed after review"}</p>
                     <h3 className="mt-2 font-display text-3xl">{bp.label}</h3>
                     <p className="mt-2 text-sm text-bone/65">{c.why}</p>
                     {shown.length > 0 && (
@@ -334,7 +334,7 @@ export function Results({ flowId }: { flowId: FlowId }) {
             >
               <ShoppingBag className="h-5 w-5" />
               <span className="font-display text-2xl">Add selected to bag</span>
-              <span className="text-xs opacity-70">{picked.length} full-size products · {money(picked.reduce((t, s) => t + (getProduct(s)?.price ?? 0), 0))}</span>
+              <span className="text-xs opacity-70">{picked.length} full-size products · {money(picked.reduce((t, s) => t + (listedPrice(getProduct(s)) ?? 0), 0))}</span>
             </button>
             )}
             <Link href={r.custom[0] ? buildHref(r.custom[0].buildId, { prefill: r.custom[0].prefill }) : "/make-it-yours/build"} className="flex flex-col items-start gap-3 border border-gold p-6 transition-colors hover:bg-gold/10">

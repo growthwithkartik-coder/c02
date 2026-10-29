@@ -100,7 +100,7 @@ function guides(): Guide[] {
           <ul>
             <li><b>Jars and masks</b> — use clean, dry fingers or a spatula so water and dirt don&apos;t get into the jar.</li>
             <li><b>Droppers</b> — avoid touching the pipette to skin; return it to the bottle straight away.</li>
-            <li><b>Lotions and oils that separate</b> — some CO2 products ask you to shake before use (for example the Calamine Calm Lotion). Follow the pack.</li>
+            <li><b>Lotions and oils that separate</b> — some CO2 products ask you to shake before use (for example the Calamine Lotion). Follow the pack.</li>
             <li><b>Bath bars</b> — keep the bar dry between uses, on a draining soap dish.</li>
             <li><b>Lip products</b> — for hygiene, don&apos;t share them.</li>
           </ul>

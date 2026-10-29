@@ -495,4 +495,3 @@ No model photography exists yet. The homepage still shows the illustrated Muse, 
 4. **Publish**: rebuild and deploy. An approved `hero` scene replaces the Muse hero, approved `gloss` scenes replace the Muse in the gloss section, and approved `on-skin` scenes replace the product photo in §07. AI-generated images are labelled "AI-generated image" on the page.
 
 Real photography works the same way: put the file in `public/campaign/people/` and add `{ "file": "/campaign/people/x.webp", "status": "approved", "source": "photography" }` under the scene id in `data/campaign-images.json`.
-# c02

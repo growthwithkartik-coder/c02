@@ -10,7 +10,7 @@ import type { Product } from "@/types";
 import { Muse } from "@/components/face-hero/Muse";
 import { useStore } from "@/components/providers/StoreProvider";
 import { site } from "@/data/site";
-import { cutoutImage, money, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
+import { cutoutImage, isPricePending, listedPrice, money, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
 
 import { priceWhatsAppHref } from "@/components/commerce/PriceOnRequest";
 /* SECTION 06 — the signature moment.
@@ -144,9 +144,9 @@ export function MuseInteraction({ glosses, photos = {} }: { glosses: Product[]; 
               <AnimatePresence mode="wait">
                 <motion.div key={g.slug} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.5 }} className="mt-6">
                   <p className="font-display text-3xl">{shade.name}</p>
-                  <p className="text-sm text-bone/60">{g.size} · {priceText(g.price)}{PRICES_ON_REQUEST ? " · as per customization" : ""}</p>
+                  <p className="text-sm text-bone/60">{g.size} · {priceText(listedPrice(g))}{isPricePending(g) ? " · as per customization" : ""}</p>
                   <div className="mt-5 flex flex-wrap gap-3">
-                    {PRICES_ON_REQUEST ? (
+                    {isPricePending(g) ? (
                       <a target="_blank" rel="noopener noreferrer" data-whatsapp-price href={priceWhatsAppHref(`${g.name} — ${shade.name}`)} className="btn btn-light">Request price</a>
                     ) : (
                       <button onClick={() => addToCart(g.slug, 1, { shade: shade.name })} className="btn btn-light">

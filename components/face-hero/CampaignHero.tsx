@@ -8,7 +8,7 @@ import { Magnetic } from "@/components/animations/motion";
 import { useStore } from "@/components/providers/StoreProvider";
 import type { Product } from "@/types";
 import { site } from "@/data/site";
-import { money, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
+import { isPricePending, listedPrice, money, priceText, PRICES_ON_REQUEST } from "@/lib/utils";
 
 import { priceWhatsAppHref } from "@/components/commerce/PriceOnRequest";
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -47,8 +47,8 @@ export function CampaignHero({ image, alt, aiGenerated, product }: { image: stri
           <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-line-dark pt-5 text-sm">
             <span className="text-bone/60">Shown:</span>
             <Link href={`/product/${product.slug}`} className="hover:text-gold-light">{product.name}</Link>
-            <span className="tabular-nums text-bone/60">{priceText(product.price)}</span>
-            {PRICES_ON_REQUEST ? (
+            <span className="tabular-nums text-bone/60">{priceText(listedPrice(product))}</span>
+            {isPricePending(product) ? (
               <a target="_blank" rel="noopener noreferrer" data-whatsapp-price href={priceWhatsAppHref(product.name)} className="inline-flex items-center gap-1.5 text-gold-light hover:text-bone">Request price</a>
             ) : (
               <button type="button" onClick={() => addToCart(product.slug)} className="inline-flex items-center gap-1.5 text-gold-light hover:text-bone"><Plus className="h-4 w-4" /> Add</button>

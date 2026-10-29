@@ -43,7 +43,7 @@ export const combos: Combo[] = [
     group: "essentials",
     kicker: "3 steps · morning & evening",
     purpose: "A simple everyday face routine for most skin types.",
-    description: "A gentle aloe-and-neem cleanser, the 24K Gold Face Elixir for hydration and Renew Firming Cream to finish. Three steps, twice a day.",
+    description: "A gentle aloe-and-neem cleanser, the 24K Gold Serum for hydration and the Anti-Aging Cream to finish. Three steps, twice a day.",
     items: [
       { slug: "neem-rose-face-wash", step: "Cleanse", when: "AM & PM" },
       { slug: "24k-gold-face-elixir", step: "Hydrate", when: "AM & PM" },
@@ -62,7 +62,7 @@ export const combos: Combo[] = [
     group: "face",
     kicker: "3 steps · for skin that runs oily",
     purpose: "Charcoal, neem, aloe and turmeric for skin that gets congested or shiny.",
-    description: "An activated charcoal face wash, the Clarité Botanical Cream with aloe vera, neem, tulasi and turmeric, and a weekly bamboo charcoal mask.",
+    description: "An activated charcoal face wash, the Acne n Pimple Cream with aloe vera, neem, tulasi and turmeric, and a weekly bamboo charcoal mask.",
     items: [
       { slug: "noir-charcoal-face-wash", step: "Cleanse", when: "AM & PM" },
       { slug: "clarite-botanical-cream", step: "Treat", when: "AM and/or PM" },
@@ -107,7 +107,7 @@ export const combos: Combo[] = [
     group: "body",
     kicker: "3 steps · after the bath",
     purpose: "Wash, moisturize and soothe — a complete body routine.",
-    description: "Lavender, sandalwood and mint body wash, Aloe Veil lotion on damp skin, and Aloe Pure Gel wherever skin wants extra comfort.",
+    description: "Lavender, sandalwood and mint body wash, the Aloe Fresh body lotion on damp skin, and Aloe Vera Gel wherever skin wants extra comfort.",
     items: [
       { slug: "lavender-santal-body-wash", step: "Wash", when: "Daily" },
       { slug: "aloe-veil-body-lotion", step: "Moisturize", when: "After bathing" },

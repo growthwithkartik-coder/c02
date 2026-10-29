@@ -50,7 +50,7 @@ export default function SamplingPage() {
               </div>
             </div>
             <ul className="flex items-end justify-center gap-4 lg:col-span-5" aria-hidden>
-              {["24k-gold-face-elixir", "renew-firming-cream", "coco-glow-body-lotion", "aloe-nourish-shampoo"].map((s, i) => (
+              {["noir-charcoal-mask", "goat-milk-herbal-bar", "coco-glow-body-lotion", "scalp-clear-hair-oil"].map((s, i) => (
                 <li key={s} className="relative" style={{ width: ["5.5rem", "6.5rem", "7rem", "6rem"][i], aspectRatio: "3/4" }}>
                   <Image src={cutoutImage(s)} alt="" fill sizes="120px" className="object-contain object-bottom drop-shadow-[0_18px_18px_rgba(17,16,13,.25)]" priority={i === 0} />
                 </li>
@@ -66,7 +66,7 @@ export default function SamplingPage() {
         <ol className="grid gap-px bg-line md:grid-cols-4">
           {[
             ["01", "Pick travel sizes", "Choose single samples, a curated set, or build your own set of 3–5."],
-            ["02", "Request the price", "Prices are on request, as per the samples and quantities you choose."],
+            ["02", "See the price", "Every travel size shows its net weight and price; a set is the sum of its samples."],
             ["03", "Try the texture", "Use it for a few days as part of your routine."],
             ["04", "Go full size", "Every sample links straight to its full-size product — or customize from it."],
           ].map(([n, t, b]) => (

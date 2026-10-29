@@ -1,12 +1,14 @@
 # Changes
 
-## 20 October 2026 — security update
+## 26 October 2026 — prices, net weights and travel sizes from the price sheet
 
-- **Next.js 15.5.4 → 15.5.28** (fixes CVE-2025-66478 and later 15.x security advisories) and **React / React DOM → 19.3.1**. No code changes needed.
-- **postcss → 8.5.31**, pinned with an `overrides` entry in `package.json` so Next's internal copy is patched too; **sharp → 0.35.5** (image processing).
-- `npm audit --omit=dev` now reports 0 vulnerabilities. The remaining audit notes are in Tailwind 3's build-time tooling only (not shipped to visitors); clearing them needs Tailwind 4, a separate migration.
-- Verified: typecheck, full production build (139 pages) and a smoke test of home, shop, product, services, Make It Yours, customization and API routes.
-- After unzipping, run `npm install` (or `npm ci`) to pick up the new versions.
+Full report (product-by-product mapping, flagged items): `docs/PRICE-SHEET-UPDATE-2026-10-26.md`.
+
+- **Catalogue prices are back.** 52 of 55 products now show the full-size price and net weight from the CO2 price sheet; names follow the sheet (e.g. "Noir Charcoal Face Wash" → "Charcoal Face Wash"). URLs and photos unchanged. Add to bag / checkout work again for these products.
+- **Travel sizes** (38 products) come from the sheet, shown beside the full size on cards, quick view and product pages. Products with no travel size (NA) show only the full size — no travel row, label, placeholder or "not available" text, and their "Try a sample" section is omitted.
+- **Not priced, flagged for review:** Red Grapes Face Wash, Red Wine Soap, Scalp Clear Treatment Gel — still "Price on request" with the WhatsApp button.
+- **Still on request:** made-to-order formulas / Make It Yours builder (`CUSTOM_PRICES_ON_REQUEST`) and the six services.
+- New `components/ui/SizePrice.tsx`; price wording updated in FAQs, About, Terms, Combos, Sampling and the announcement bar; sample sets rebuilt from products with travel sizes.
 
 ## 18 October 2026 (fourth batch) — stale images fixed (cache-busting)
 

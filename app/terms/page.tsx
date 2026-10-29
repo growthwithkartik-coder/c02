@@ -10,7 +10,7 @@ export default function TermsPage() {
       <h2>Products</h2>
       <p>CO2 products are cosmetics. Descriptions and ingredients are taken from product packaging; colours may vary slightly on screen. Always read the pack and patch-test before first use. Products are not intended to diagnose, treat or cure any condition.</p>
       <h2>Prices & payment</h2>
-      <p>Prices are on request and quoted as per your customization, in Indian Rupees and including applicable taxes unless stated otherwise. Payment is taken through Razorpay or by UPI once you accept a quote. An order is confirmed once payment is verified.</p>
+      <p>Prices of ready-made products and travel sizes are listed on the site in Indian Rupees and include applicable taxes unless stated otherwise. Made-to-order formulas and customizations are quoted on request. Payment is taken through Razorpay or by UPI. An order is confirmed once payment is verified.</p>
       <h2>Made-to-order formulas</h2>
       <p>Custom formulas are prepared to the options you choose. We may contact you to confirm details before preparation. Personalization is cosmetic and is not a medical service.</p>
       <h2>Shipping, returns & refunds</h2>
@@ -26,7 +26,7 @@ export default function TermsPage() {
       <h2>Customization requests</h2>
       <p>A customization request for a formula that isn&rsquo;t in our catalogue is an enquiry, not an order. We may decline a request. A contract is formed only when you accept our quote and pay for the order.</p>
       <h2>Travel sizes</h2>
-      <p>Travel sizes are smaller packs of the same products, priced on request. Their price is not credited towards a full-size purchase unless we say so in writing.</p>
+      <p>Travel sizes are smaller packs of the same products, at the travel-size price listed on the site. Their price is not credited towards a full-size purchase unless we say so in writing.</p>
     </LegalPage>
   );
 }

@@ -1,7 +1,7 @@
 import "server-only";
 import { getAllProducts, getProduct, typeLabel } from "@/lib/catalog";
 import type { Product } from "@/types";
-import { isPricePending, PRICES_ON_REQUEST } from "@/lib/utils";
+import { CUSTOM_PRICES_ON_REQUEST, isPricePending, PRICES_ON_REQUEST } from "@/lib/utils";
 
 /* Product facts handed to the model. Only fields from data/products.ts —
    the model is told these are the ONLY facts it may use. */
@@ -32,7 +32,7 @@ export function compactCatalogue() {
       slug: p.slug,
       name: p.name,
       type: typeLabel(p.type),
-      ...(PRICES_ON_REQUEST ? { price: "on request, as per customization" } : { price_inr: p.price }),
+      ...(PRICES_ON_REQUEST || CUSTOM_PRICES_ON_REQUEST ? { price: "on request, as per customization" } : { price_inr: p.price }),
       suits: p.skinTypes.length >= 6 ? "all skin types" : p.skinTypes.join(", "),
       texture: p.texture,
       key_ingredients: p.ingredients.slice(0, 5).map((i) => i.name),
